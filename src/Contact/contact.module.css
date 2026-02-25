@@ -1,7 +1,24 @@
 .contact_container {
-    background: #f5f7fa;
+    background: linear-gradient(180deg, #0d2438 0%, #0a1929 100%);
     min-height: 100vh;
     padding: 100px 160px;
+    position: relative;
+    margin-top: -1px;
+}
+
+.contact_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%230d2438' d='M0,64 C240,20 480,0 720,32 C960,64 1200,96 1440,64 L1440,120 L0,120 Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transform: translateY(-100%);
+    z-index: 1;
 }
 
 .contact_wrapper {
@@ -16,11 +33,18 @@
 }
 
 .profile_card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 20px;
     padding: 40px 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.profile_card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
 }
 
 .profile_image {
@@ -29,8 +53,8 @@
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #f5f7fa;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 4px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 5px 20px rgba(56, 189, 248, 0.4);
 }
 
 .profile_image img {
@@ -40,7 +64,7 @@
 }
 
 .profile_card h2 {
-    color: #1a1a1a;
+    color: #ffffff;
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 5px;
@@ -48,13 +72,13 @@
 }
 
 .username {
-    color: #8b949e;
+    color: #38BDF8;
     font-size: 0.95rem;
     margin-bottom: 5px;
 }
 
 .location {
-    color: #8b949e;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     margin-bottom: 25px;
 }
@@ -65,24 +89,24 @@
     gap: 40px;
     margin-bottom: 25px;
     padding: 20px 0;
-    border-top: 1px solid #e1e4e8;
-    border-bottom: 1px solid #e1e4e8;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .stat_item h3 {
-    color: #1a1a1a;
+    color: #ffffff;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
 .stat_item p {
-    color: #8b949e;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
 }
 
 .bio {
-    color: #586069;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 25px;
@@ -96,8 +120,8 @@
 
 .follow_btn {
     flex: 1;
-    background: #ff6b6b;
-    color: #ffffff;
+    background: #38BDF8;
+    color: #020617;
     border: none;
     padding: 12px 20px;
     border-radius: 10px;
@@ -105,18 +129,20 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
 }
 
 .follow_btn:hover {
-    background: #ff5252;
+    background: #0EA5E9;
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
 }
 
 .message_btn {
     flex: 1;
-    background: #f5f7fa;
-    color: #1a1a1a;
-    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(56, 189, 248, 0.3);
     padding: 12px 20px;
     border-radius: 10px;
     font-size: 1rem;
@@ -126,7 +152,8 @@
 }
 
 .message_btn:hover {
-    background: #e1e4e8;
+    background: rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.5);
     transform: translateY(-2px);
 }
 
@@ -135,7 +162,7 @@
 }
 
 .contact_right h1 {
-    color: #8b949e;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -150,13 +177,15 @@
 }
 
 .social_card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 20px 25px;
     display: flex;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     text-decoration: none;
     cursor: pointer;
@@ -164,7 +193,9 @@
 
 .social_card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 8px 30px rgba(56, 189, 248, 0.2);
 }
 
 .social_icon {
@@ -187,7 +218,7 @@
 }
 
 .social_info h3 {
-    color: #1a1a1a;
+    color: #ffffff;
     font-size: 1.05rem;
     font-weight: 600;
     margin-bottom: 3px;
@@ -195,18 +226,18 @@
 }
 
 .social_info p {
-    color: #8b949e;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
 }
 
 .arrow_icon {
-    color: #8b949e;
+    color: rgba(255, 255, 255, 0.4);
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .social_card:hover .arrow_icon {
-    color: #1a1a1a;
+    color: #38BDF8;
     transform: translateX(5px);
 }
 
@@ -355,9 +386,9 @@
         text-align: center;
         margin: 40px auto 20px auto;
         padding: 15px 20px;
-        color: #8b949e;
+        color: rgba(255, 255, 255, 0.5);
         font-size: 0.85rem;
-        border-top: 1px solid #e1e4e8;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
         max-width: 400px;
         display: block;

@@ -1,100 +1,132 @@
 import React from 'react'
-import classes from "./projucts.module.css";
-import { OpenInNew, GitHub } from '@mui/icons-material';
+import styles from './projucts.module.css'
 
 function Projucts() {
   const projects = [
     {
-      title: "Amazon E-commerce Website",
-      description: "A full-featured e-commerce platform with product listings, shopping cart, and checkout functionality. Built with modern web technologies.",
-      tech: ["React", "CSS", "JavaScript", "API"],
+      id: 1,
+      title: "Amazon E-commerce",
+      description: "Full-featured e-commerce platform with shopping cart and checkout functionality.",
+      tech: ["React", "CSS", "JavaScript"],
       link: "https://babilons-amazon.netlify.app/",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800&h=600&fit=crop",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
+      id: 2,
       title: "Netflix Clone",
-      description: "A Netflix-inspired streaming platform interface with movie browsing, categories, and responsive design.",
-      tech: ["HTML", "CSS", "JavaScript", "API"],
+      description: "Streaming platform interface with movie browsing and categories.",
+      tech: ["HTML", "CSS", "JavaScript"],
       link: "https://abudiayu.github.io/netflix/",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },
     {
-      title: "Cafe Delivery Website",
-      description: "A modern cafe delivery platform featuring menu browsing, order management, and delivery tracking.",
-      tech: ["React", "Node.js", "CSS", "MongoDB"],
+      id: 3,
+      title: "Cafe Delivery",
+      description: "Modern cafe platform with menu browsing and order management.",
+      tech: ["React", "Node.js", "MongoDB"],
       link: "https://ourscafe.netlify.app",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&h=600&fit=crop",
+      gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
     },
     {
+      id: 4,
       title: "Interactive Game",
-      description: "An engaging browser-based game with smooth animations and interactive gameplay mechanics.",
-      tech: ["JavaScript", "Canvas", "HTML5", "CSS3"],
+      description: "Browser-based game with smooth animations and gameplay.",
+      tech: ["JavaScript", "Canvas", "HTML5"],
       link: "#",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&h=600&fit=crop",
+      gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
     },
     {
-      title: "Real-time Chat Application",
-      description: "A real-time messaging application with user authentication and instant message delivery.",
-      tech: ["React", "Socket.io", "Node.js", "Express"],
+      id: 5,
+      title: "Chat Application",
+      description: "Real-time messaging with user authentication.",
+      tech: ["React", "Socket.io", "Node.js"],
       link: "#",
-      github: "#",
-      image: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
+      gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
+    },
+    {
+      id: 6,
+      title: "Portfolio Website",
+      description: "Modern portfolio with smooth animations and responsive design.",
+      tech: ["React", "CSS Modules", "Vite"],
+      link: "#",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+      gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)"
     }
   ];
 
   return (
-    <>
-      <section className={classes.projuct_container}>
-        <div className={classes.projuct_wrapper}>
-          <h1>Projects</h1>
-          <div className={classes.projuct_list_container}>
-            {projects.map((project, index) => (
-              <a 
-                key={index} 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`${classes.project_card} ${index % 2 === 1 ? classes.reverse : ''}`}
-                style={{ textDecoration: 'none' }}
-              >
-                <div className={classes.project_content}>
-                  <div className={classes.project_header}>
-                    <span className={classes.project_number}>0{index + 1}.</span>
-                    <h3>{project.title}</h3>
-                  </div>
-                  <p className={classes.project_description}>{project.description}</p>
-                  <div className={classes.tech_stack}>
-                    {project.tech.map((tech, i) => (
-                      <span key={i} className={classes.tech_tag}>{tech}</span>
-                    ))}
-                  </div>
-                  <div className={classes.project_links}>
-                    {project.link !== "#" && (
-                      <span>
-                        <OpenInNew />
-                      </span>
-                    )}
-                    {project.github !== "#" && (
-                      <span>
-                        <GitHub />
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <div className={classes.project_image}>
-                  <img src={project.image} alt={project.title} />
-                </div>
-              </a>
-            ))}
-          </div>
+    <section className={styles.projectsSection}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          
+          <h1 className={styles.title}> Projects</h1>
+          <p className={styles.subtitle}>
+            Explore my latest work and creative solutions
+          </p>
         </div>
-      </section>
-    </>
-  )
+
+        <div className={styles.projectsGrid}>
+          {projects.map((project, index) => (
+            <article 
+              key={project.id} 
+              className={styles.projectCard}
+              style={{ '--delay': `${index * 0.1}s` }}
+            >
+              <div className={styles.cardImage}>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  loading="lazy"
+                />
+                <div 
+                  className={styles.imageGradient}
+                  style={{ background: project.gradient }}
+                ></div>
+              </div>
+
+              <div className={styles.cardContent}>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <p className={styles.projectDesc}>{project.description}</p>
+
+                <div className={styles.techStack}>
+                  {project.tech.map((tech, i) => (
+                    <span key={i} className={styles.techTag}>{tech}</span>
+                  ))}
+                </div>
+
+                {project.link !== "#" && (
+                  <a 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.viewBtn}
+                  >
+                    <span>View Project</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8h10m0 0l-3-3m3 3l-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                )}
+              </div>
+
+              <div className={styles.cardNumber}>0{project.id}</div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.bgShapes}>
+        <div className={styles.shape1}></div>
+        <div className={styles.shape2}></div>
+        <div className={styles.shape3}></div>
+      </div>
+    </section>
+  );
 }
 
 export default Projucts;

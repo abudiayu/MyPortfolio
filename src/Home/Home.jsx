@@ -45,9 +45,12 @@ function Home({ showSidebar }) {
                 <div className={ classes.header_main_wrapper}>
                     <div>
                         <div className={classes.header_text_container}>
-                            Hi, <br />
-                            I'm <img src={Aqadr} alt="Aqadr" className={classes.name_img} /> <br />
-                            Web Developer.
+                            <span className={classes.hiText}>Hi,</span>
+                            <br />
+                            <span className={classes.imText}>I'm</span>{' '}
+                            <img src={Aqadr} alt="Aqadr" className={classes.name_img} />
+                            <br />
+                            <span className={classes.webDeveloper}>Web Developer.</span>
                             <p>Software Developer Basic Skill's are JavaScript | React | NodeJs| Laravel | Python | MongoDB ...</p>
                         </div>
                         <div className={classes.header_contact}>
