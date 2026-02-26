@@ -545,7 +545,7 @@
     font-weight: 700;
     margin-bottom: 10px;
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #ffffff, #4ecdc4);
+    background: linear-gradient(135deg, hsl(0, 100%, 51%), #19d269);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

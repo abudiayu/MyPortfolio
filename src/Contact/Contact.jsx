@@ -114,7 +114,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="copy">@Copy wright is reserived to Abdul Qadir</div>
+        <div className={classes.copy}>@Copy wright is reserived to Abdul Qadir</div>
       </section>
     </>
   )

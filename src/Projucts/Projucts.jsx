@@ -1,7 +1,32 @@
-import React from 'react'
+import { useState } from 'react'
 import styles from './projucts.module.css'
 
 function Projucts() {
+  const [cardTransforms, setCardTransforms] = useState({});
+
+  const handleMouseMove = (e, projectId) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -15;
+    const rotateY = ((x - centerX) / centerX) * 15;
+
+    setCardTransforms(prev => ({
+      ...prev,
+      [projectId]: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`
+    }));
+  };
+
+  const handleMouseLeave = (projectId) => {
+    setCardTransforms(prev => ({
+      ...prev,
+      [projectId]: 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)'
+    }));
+  };
+
   const projects = [
     {
       id: 1,
@@ -35,7 +60,7 @@ function Projucts() {
       title: "Interactive Game",
       description: "Browser-based game with smooth animations and gameplay.",
       tech: ["JavaScript", "Canvas", "HTML5"],
-      link: "#",
+      link: "https://abudiayu.github.io/",
       image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&h=600&fit=crop",
       gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
     },
@@ -44,7 +69,7 @@ function Projucts() {
       title: "Chat Application",
       description: "Real-time messaging with user authentication.",
       tech: ["React", "Socket.io", "Node.js"],
-      link: "#",
+      link: "https://abudiayu.github.io/",
       image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
     },
@@ -53,7 +78,7 @@ function Projucts() {
       title: "Portfolio Website",
       description: "Modern portfolio with smooth animations and responsive design.",
       tech: ["React", "CSS Modules", "Vite"],
-      link: "#",
+      link: "https://abudiayu.github.io/",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)"
     }
@@ -75,7 +100,12 @@ function Projucts() {
             <article 
               key={project.id} 
               className={styles.projectCard}
-              style={{ '--delay': `${index * 0.1}s` }}
+              style={{ 
+                '--delay': `${index * 0.1}s`,
+                transform: cardTransforms[project.id] || 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)'
+              }}
+              onMouseMove={(e) => handleMouseMove(e, project.id)}
+              onMouseLeave={() => handleMouseLeave(project.id)}
             >
               <div className={styles.cardImage}>
                 <img 

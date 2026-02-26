@@ -1,10 +1,12 @@
 import { React,useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './Home/Home';
 import Skill from './Skill/Skill';
 import About from './About/About';
 import Projucts from './Projucts/Projucts';
 import Contact from './Contact/Contact';
+import PersonalInfo from './PersonalInfo/PersonalInfo';
 import { KeyboardArrowUp } from '@mui/icons-material';
 
 function App() {
@@ -59,23 +61,30 @@ function App() {
   };
 
   return (
-    <>
-      <Home showSidebar={showSidebar} />
-      <Skill/>
-      <About/>
-      <Projucts/>
-      <Contact/>
-      
-      {showScrollTop && (
-        <button 
-          onClick={scrollToTop} 
-          className="scroll-to-top"
-          aria-label="Scroll to top"
-        >
-          <KeyboardArrowUp />
-        </button>
-      )}
-    </>
+    <Router>
+      <Routes>
+        <Route path="/personal-info" element={<PersonalInfo />} />
+        <Route path="/" element={
+          <>
+            <Home showSidebar={showSidebar} />
+            <Skill/>
+            <About/>
+            <Projucts/>
+            <Contact/>
+            
+            {showScrollTop && (
+              <button 
+                onClick={scrollToTop} 
+                className="scroll-to-top"
+                aria-label="Scroll to top"
+              >
+                <KeyboardArrowUp />
+              </button>
+            )}
+          </>
+        } />
+      </Routes>
+    </Router>
   )
 }
 

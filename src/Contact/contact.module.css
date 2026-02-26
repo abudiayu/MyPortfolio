@@ -120,8 +120,8 @@
 
 .follow_btn {
     flex: 1;
-    background: #38BDF8;
-    color: #020617;
+    background: #d21717;
+    color: #f9f9f9;
     border: none;
     padding: 12px 20px;
     border-radius: 10px;
@@ -133,7 +133,7 @@
 }
 
 .follow_btn:hover {
-    background: #0EA5E9;
+    background: #d21717;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
 }
@@ -241,7 +241,17 @@
     transform: translateX(5px);
 }
 
-
+    .copy {
+        text-align: center;
+        margin: 40px auto 20px auto;
+        padding: 15px 20px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        max-width: 400px;
+        display: block;
+    }
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .contact_container {

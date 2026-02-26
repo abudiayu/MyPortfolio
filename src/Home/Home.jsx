@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 import classes from "./Home.module.css";
 import Aqadr from "../assets/Aqadr.png";
 import qLogo from "../assets/q.png";
@@ -23,13 +24,14 @@ function Home({ showSidebar }) {
   return (
     <>
         <header className= {classes.header_container}>
-            {showSidebar && (
-            <div className={ classes.header_side_container}>
+            <div className={`${classes.header_side_container} ${!showSidebar ? classes.hidden : ''}`}>
                 <div className={ classes.header_side_wrapper}>
-                    <img src={aqadir} alt="Profile" />
+                    <img src={aqadir} alt="Profile" className={classes.profileImg} />
                     <div className={classes.header_side_icon}>
-                        <Link href= "./Home.jsx"><HomeIcon/></Link>
-                        <Link href= " ./personalInfo"> <PersonIcon/> </Link>
+                        <Link href= "#"><HomeIcon/></Link>
+                        <RouterLink to="/personal-info" className={classes.personalInfoLink}>
+                            <PersonIcon/>
+                        </RouterLink>
                         <Link href=" https://github.com/abudiayu" ><GitHubIcon/></Link>
                     </div>
                     <div className={classes.header_side_icon_contact}>
@@ -40,7 +42,6 @@ function Home({ showSidebar }) {
                     </div>
                 </div>
             </div>
-            )}
             <div className={ classes.header_main_container}>
                 <div className={ classes.header_main_wrapper}>
                     <div>

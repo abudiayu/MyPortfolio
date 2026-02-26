@@ -27,10 +27,16 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: auto;
 }
 
-body:has(.contact_container) .header_side_container {
-    display: none;
+.header_side_container.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
 }
 
 .header_side_wrapper {
@@ -41,6 +47,53 @@ body:has(.contact_container) .header_side_container {
     height: 100%;
     width: 100%;
     color: #ffffff;
+}
+
+/* Awesome Profile Image */
+.profileImg {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(#0a1929, #0a1929) padding-box,
+                linear-gradient(135deg, #38BDF8, #A855F7, #EC4899) border-box;
+    box-shadow: 
+        0 0 20px rgba(56, 189, 248, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.3),
+        0 4px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: profileGlow 3s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes profileGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(56, 189, 248, 0.5),
+            0 0 40px rgba(168, 85, 247, 0.3),
+            0 4px 15px rgba(0, 0, 0, 0.5);
+        filter: brightness(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(56, 189, 248, 0.8),
+            0 0 60px rgba(168, 85, 247, 0.5),
+            0 6px 20px rgba(0, 0, 0, 0.6);
+        filter: brightness(1.1);
+    }
+}
+
+.profileImg:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 
+        0 0 40px rgba(56, 189, 248, 0.9),
+        0 0 80px rgba(168, 85, 247, 0.7),
+        0 8px 30px rgba(0, 0, 0, 0.7);
+    filter: brightness(1.2) saturate(1.2);
+    animation: profileGlow 1.5s ease-in-out infinite;
 }
 
 .header_side_wrapper img {
@@ -282,7 +335,7 @@ body:has(.contact_container) .header_side_container {
     background-color: transparent;
     color: #ffd700;
     border: 2px solid #ffd700;
-    padding: 12px 30px;
+    padding: 14px 40px;
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -291,6 +344,8 @@ body:has(.contact_container) .header_side_container {
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     position: relative;
     overflow: hidden;
+    border-radius: 10px 15px 20px 50px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
 }
 
 .header_contact button::before {
@@ -315,6 +370,8 @@ body:has(.contact_container) .header_side_container {
 .header_contact button:hover {
     color: #0a1929;
     border-color: #ffd700;
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+    transform: translateY(-2px);
 }
 
 .large_q_logo {
@@ -464,7 +521,7 @@ body:has(.contact_container) .header_side_container {
     .header_contact button {
         width: auto;
         max-width: 100%;
-        padding: 12px 35px;
+        padding: 14px 40px;
         font-size: 0.85rem;
         letter-spacing: 1.5px;
     }
@@ -612,11 +669,12 @@ body:has(.contact_container) .header_side_container {
     }
 
     .header_contact button {
-        padding: 11px 30px;
+        padding: 13px 38px;
         font-size: 0.8rem;
         letter-spacing: 1.2px;
         max-width: 100%;
         width: auto;
+
     }
 
     .large_q_logo {
@@ -666,4 +724,18 @@ body:has(.contact_container) .header_side_container {
         width: 280px;
         display: block;
     }
+}
+
+/* Personal Info Link */
+.personalInfoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.personalInfoLink:hover {
+  transform: scale(1.1);
 }
