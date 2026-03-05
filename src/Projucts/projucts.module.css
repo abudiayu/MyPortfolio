@@ -73,7 +73,6 @@
   padding: 10px 0;
   max-width: 750px;
   margin: 0 auto;
-  perspective: 1500px;
 }
 
 /* Project Card */
@@ -84,14 +83,12 @@
   border-radius: 16px;
   overflow: hidden;
   backdrop-filter: blur(20px);
-  transition: all 0.1s ease-out, border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: slideInUp 0.8s ease-out backwards;
   animation-delay: var(--delay);
-  will-change: transform;
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transform-style: preserve-3d;
 }
 
 .projectCard::before {
@@ -124,14 +121,16 @@
   opacity: 1;
 }
 
-.projectCard:hover {
+.projectCard:hover,
+.projectCard.hovered {
+  transform: translateY(-8px) scale(1.02);
   border-color: rgba(168, 85, 247, 0.6);
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 
-    0 30px 70px rgba(168, 85, 247, 0.5),
+    0 20px 40px rgba(168, 85, 247, 0.3),
     0 0 0 1px rgba(168, 85, 247, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 40px 100px rgba(0, 0, 0, 0.6);
+    0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* Card Image */
@@ -141,7 +140,6 @@
   height: 130px;
   overflow: hidden;
   background: #1a1f3a;
-  transform: translateZ(25px);
 }
 
 .cardImage::after {
@@ -156,13 +154,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
   filter: brightness(0.9);
 }
 
-.projectCard:hover .cardImage img {
-  transform: scale(1.2) rotate(2deg) translateZ(35px);
+.projectCard:hover .cardImage img,
+.projectCard.hovered .cardImage img {
+  transform: scale(1.15);
   filter: brightness(1.1);
 }
 
@@ -194,7 +192,6 @@
   padding: 14px;
   position: relative;
   background: linear-gradient(180deg, rgba(26, 31, 58, 0.5) 0%, rgba(10, 14, 39, 0.8) 100%);
-  transform: translateZ(15px);
 }
 
 .projectTitle {
@@ -205,12 +202,12 @@
   line-height: 1.3;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
-  transform: translateZ(8px);
 }
 
-.projectCard:hover .projectTitle {
+.projectCard:hover .projectTitle,
+.projectCard.hovered .projectTitle {
   color: #c4b5fd;
-  transform: translateZ(20px);
+  transform: translateX(4px);
 }
 
 .projectDesc {
@@ -219,7 +216,6 @@
   line-height: 1.4;
   margin-bottom: 10px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transform: translateZ(5px);
 }
 
 /* Tech Stack */
@@ -335,16 +331,16 @@
   pointer-events: none;
   z-index: 0;
   text-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
-  transition: all 0.3s ease;
-  transform: translateZ(35px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projectCard:hover .cardNumber {
+.projectCard:hover .cardNumber,
+.projectCard.hovered .cardNumber {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(168, 85, 247, 0.3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  transform: translateZ(50px) scale(1.15);
+  transform: scale(1.1);
   text-shadow: 0 0 30px rgba(168, 85, 247, 0.7);
 }
 

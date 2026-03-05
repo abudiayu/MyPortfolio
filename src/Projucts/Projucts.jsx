@@ -2,30 +2,7 @@ import { useState } from 'react'
 import styles from './projucts.module.css'
 
 function Projucts() {
-  const [cardTransforms, setCardTransforms] = useState({});
-
-  const handleMouseMove = (e, projectId) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -15;
-    const rotateY = ((x - centerX) / centerX) * 15;
-
-    setCardTransforms(prev => ({
-      ...prev,
-      [projectId]: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`
-    }));
-  };
-
-  const handleMouseLeave = (projectId) => {
-    setCardTransforms(prev => ({
-      ...prev,
-      [projectId]: 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)'
-    }));
-  };
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const projects = [
     {
@@ -39,13 +16,14 @@ function Projucts() {
     },
     {
       id: 2,
-      title: "Netflix Clone",
-      description: "Streaming platform interface with movie browsing and categories.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "https://abudiayu.github.io/netflix/",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+      title: "Abe Garage",
+      description: "Modern garage with smooth animations and responsive design.",
+      tech: ["React", "CSS Modules", "Vite"],
+      link: "https://garagefrontend-lime.vercel.app/",
+      image: "https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=612x612&w=0&k=20&c=5zlDGgLNNaWsp_jq_L1AsGT85wrzpdl3kVH-75S-zTU=",
+      gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)"
     },
+   
     {
       id: 3,
       title: "Cafe Delivery",
@@ -73,15 +51,16 @@ function Projucts() {
       image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
     },
+    
     {
       id: 6,
-      title: "Abe Garage",
-      description: "Modern garage with smooth animations and responsive design.",
-      tech: ["React", "CSS Modules", "Vite"],
-      link: "https://garagefrontend-lime.vercel.app/",
-      image: "https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=612x612&w=0&k=20&c=5zlDGgLNNaWsp_jq_L1AsGT85wrzpdl3kVH-75S-zTU=",
-      gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)"
-    }
+      title: "Netflix Clone",
+      description: "Streaming platform interface with movie browsing and categories.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      link: "https://abudiayu.github.io/netflix/",
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+    },
   ];
 
   return (
@@ -99,13 +78,10 @@ function Projucts() {
           {projects.map((project, index) => (
             <article 
               key={project.id} 
-              className={styles.projectCard}
-              style={{ 
-                '--delay': `${index * 0.1}s`,
-                transform: cardTransforms[project.id] || 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)'
-              }}
-              onMouseMove={(e) => handleMouseMove(e, project.id)}
-              onMouseLeave={() => handleMouseLeave(project.id)}
+              className={`${styles.projectCard} ${hoveredCard === project.id ? styles.hovered : ''}`}
+              style={{ '--delay': `${index * 0.1}s` }}
+              onMouseEnter={() => setHoveredCard(project.id)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
               <div className={styles.cardImage}>
                 <img 
