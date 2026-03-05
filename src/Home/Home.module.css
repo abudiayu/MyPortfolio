@@ -446,20 +446,22 @@
 
     .header_side_icon svg,
     .header_side_icon_contact svg {
-        font-size: 18px;
+        font-size: 32px;
+        transition: all 0.3s ease;
     }
 
     .header_side_icon svg:hover,
     .header_side_icon_contact svg:hover {
         animation: wiggle 0.5s ease;
+        transform: scale(1.2);
     }
 
     .header_side_icon {
-        gap: 15px;
+        gap: 25px;
     }
 
     .header_side_icon_contact {
-        gap: 14px;
+        gap: 22px;
     }
 
     .header_main_container {
@@ -598,7 +600,7 @@
 
 @media (max-width: 480px) {
     .header_container {
-        padding: 10px 12px 10px 55px;
+        padding: 10px 12px 10px 70px;
     }
 
     .header_container::before {
@@ -616,25 +618,31 @@
     }
 
     .header_side_container {
-        width: 45px;
+        width: 65px;
     }
 
     .header_side_wrapper img {
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
     }
 
     .header_side_icon svg,
     .header_side_icon_contact svg {
-        font-size: 16px;
+        font-size: 28px;
+        transition: all 0.3s ease;
+    }
+
+    .header_side_icon svg:hover,
+    .header_side_icon_contact svg:hover {
+        transform: scale(1.15);
     }
 
     .header_side_icon {
-        gap: 12px;
+        gap: 20px;
     }
 
     .header_side_icon_contact {
-        gap: 12px;
+        gap: 18px;
     }
 
     .header_main_wrapper {
