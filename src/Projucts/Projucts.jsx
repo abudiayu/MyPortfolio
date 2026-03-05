@@ -78,7 +78,7 @@ function Projucts() {
       title: "Abe Garage",
       description: "Modern garage with smooth animations and responsive design.",
       tech: ["React", "CSS Modules", "Vite"],
-      link: "https://abudiayu.github.io/",
+      link: "https://garagefrontend-lime.vercel.app/",
       image: "https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=612x612&w=0&k=20&c=5zlDGgLNNaWsp_jq_L1AsGT85wrzpdl3kVH-75S-zTU=",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)"
     }
