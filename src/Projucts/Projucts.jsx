@@ -60,7 +60,7 @@ function Projucts() {
       title: "Interactive Game",
       description: "Browser-based game with smooth animations and gameplay.",
       tech: ["JavaScript", "Canvas", "HTML5"],
-      link: "https://abudiayu.github.io/",
+      link: "https://github.com/abudiayu/snakeGame",
       image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&h=600&fit=crop",
       gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
     },
@@ -69,17 +69,17 @@ function Projucts() {
       title: "Chat Application",
       description: "Real-time messaging with user authentication.",
       tech: ["React", "Socket.io", "Node.js"],
-      link: "https://abudiayu.github.io/",
+      link: "https://github.com/abudiayu/CHAT-APP",
       image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
     },
     {
       id: 6,
-      title: "Portfolio Website",
-      description: "Modern portfolio with smooth animations and responsive design.",
+      title: "Abe Garage",
+      description: "Modern garage with smooth animations and responsive design.",
       tech: ["React", "CSS Modules", "Vite"],
       link: "https://abudiayu.github.io/",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+      image: "https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=612x612&w=0&k=20&c=5zlDGgLNNaWsp_jq_L1AsGT85wrzpdl3kVH-75S-zTU=",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)"
     }
   ];
