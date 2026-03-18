@@ -7,12 +7,12 @@ function Projucts() {
   const projects = [
     {
       id: 1,
-      title: "Amazon E-commerce",
+      title: "Tinabay E-commerce",
       description: "Full-featured e-commerce platform with shopping cart and checkout functionality.",
-      tech: ["React", "CSS", "JavaScript"],
-      link: "https://babilons-amazon.netlify.app/",
-      image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800&h=600&fit=crop",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+      tech: ["React", "JSX", "JavaScript, SQL DB, API,"],
+      link: "https://tinabay.netlify.app/",
+      image: "https://play-lh.googleusercontent.com/vZzAzNNGUTxnNG43TWkzegqARRhJ5InumIRyxLhbB5qDRcJVHDJs1WzTJcs3ESOI1w=w526-h296-rw",
+      gradient: "linear-gradient(135deg, #ed921c 0%, #040501 100%)"
     },
     {
       id: 2,
