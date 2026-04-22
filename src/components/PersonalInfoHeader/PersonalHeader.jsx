@@ -1,27 +1,43 @@
-import React from 'react';
 import styles from "./PersonalHeader.module.css";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StarIcon from '@mui/icons-material/Star';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import myImg from "../../assets/home_me-.png";
-import qLogo from '../../assets/q.png';
+
+const TICKER_ITEMS = [
+  'FREELANCER', 'UI/UX DESIGNER', 'WEB DESIGN', 'BRANDING DESIGN',
+  'FREELANCER', 'UI/UX DESIGNER', 'WEB DESIGN', 'BRANDING DESIGN',
+];
+
+const TickerRow = ({ reverse }) => (
+  <div className={`${styles.tickerRow} ${reverse ? styles.tickerRowDark : ''}`}>
+    <div className={`${styles.tickerTrack} ${reverse ? styles.tickerReverse : ''}`}>
+      {[...TICKER_ITEMS, ...TICKER_ITEMS].map((label, i) => (
+        <span key={i} className={styles.tickerItem}>
+          <span className={styles.tickerDot}>
+            <PlayArrowIcon style={{ fontSize: 11 }} />
+          </span>
+          {label}
+        </span>
+      ))}
+    </div>
+  </div>
+);
 
 const PersonalHeader = () => {
   return (
     <div className={styles.heroWrapper}>
 
-
       {/* ── Hero ── */}
       <main className={styles.mainContent}>
 
-        {/* Giant background name */}
         <h1 className={styles.bgNameText} aria-hidden="true">ABDUL QADIR</h1>
 
         <div className={styles.contentGrid}>
 
           {/* Left */}
           <div className={styles.leftCol}>
-            <h2 className={styles.subTitleLeft}>Creative - Web</h2>
+            <h2 className={styles.subTitleLeft}> Web - Developer </h2>
             <p className={styles.description}>
               I break down complex user experience problems to create integrity
               focussed solutions that connect billions of people around the world.
@@ -49,7 +65,7 @@ const PersonalHeader = () => {
 
           {/* Right */}
           <div className={styles.rightCol}>
-            <h2 className={styles.subTitleRight}>Developer</h2>
+            <h2 className={styles.subTitleRight}>Softaware Engineer</h2>
             <div className={styles.ratingCard}>
               <div className={styles.ratingLeft}>
                 <span className={styles.ratingBig}>4.9</span>
@@ -67,7 +83,14 @@ const PersonalHeader = () => {
           </div>
 
         </div>
+
+      {/* ── Scrolling ticker ── */}
       </main>
+
+      <div className={styles.tickerWrapper}>
+        <TickerRow />
+        <TickerRow reverse />
+      </div>
 
     </div>
   );
