@@ -66,7 +66,7 @@ function Projucts() {
       title: "Airbnb",
       description: "Streaming platform interface with Travile booking and Rooms.",
       tech: ["JSX", "Taillwind", "JavaScript"],
-      link: "https://airb-clon.netlify.app/",
+      link: "https://babilon-air.netlify.app/",
       image: "https://c8.alamy.com/comp/2M0W154/smartphone-with-logo-of-american-homestay-marketplace-company-airbnb-inc-on-screen-in-front-of-business-website-focus-on-right-of-phone-display-2M0W154.jpg",
       gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },

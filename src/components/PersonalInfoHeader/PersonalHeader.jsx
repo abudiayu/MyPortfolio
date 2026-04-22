@@ -1,0 +1,76 @@
+import React from 'react';
+import styles from "./PersonalHeader.module.css";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import StarIcon from '@mui/icons-material/Star';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import myImg from "../../assets/home_me-.png";
+import qLogo from '../../assets/q.png';
+
+const PersonalHeader = () => {
+  return (
+    <div className={styles.heroWrapper}>
+
+
+      {/* ── Hero ── */}
+      <main className={styles.mainContent}>
+
+        {/* Giant background name */}
+        <h1 className={styles.bgNameText} aria-hidden="true">ABDUL QADIR</h1>
+
+        <div className={styles.contentGrid}>
+
+          {/* Left */}
+          <div className={styles.leftCol}>
+            <h2 className={styles.subTitleLeft}>Creative - Web</h2>
+            <p className={styles.description}>
+              I break down complex user experience problems to create integrity
+              focussed solutions that connect billions of people around the world.
+            </p>
+            <div className={styles.ctaRow}>
+              <button className={styles.hireBtn}>
+                <span className={styles.btnIconWrap}>
+                  <ArrowOutwardIcon style={{ fontSize: 14 }} />
+                </span>
+                HIRE ME NOW
+              </button>
+              <button className={styles.videoBtn}>
+                <div className={styles.playCircle}>
+                  <PlayArrowIcon fontSize="small" />
+                </div>
+                INTRO VIDEO
+              </button>
+            </div>
+          </div>
+
+          {/* Center photo */}
+          <div className={styles.imageCol}>
+            <img src={myImg} alt="Abdul Qadir" className={styles.subjectImg} />
+          </div>
+
+          {/* Right */}
+          <div className={styles.rightCol}>
+            <h2 className={styles.subTitleRight}>Developer</h2>
+            <div className={styles.ratingCard}>
+              <div className={styles.ratingLeft}>
+                <span className={styles.ratingBig}>4.9</span>
+                <span className={styles.reviewCount}>(32 reviews)</span>
+              </div>
+              <div className={styles.ratingRight}>
+                <span className={styles.ratingLabel}>Average Rating</span>
+                <div className={styles.starRow}>
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className={styles.star} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  );
+};
+
+export default PersonalHeader;
