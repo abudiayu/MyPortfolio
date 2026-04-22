@@ -2,7 +2,9 @@ import styles from "./PersonalHeader.module.css";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StarIcon from '@mui/icons-material/Star';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import myImg from "../../assets/home_me-.png";
+import { useNavigate } from 'react-router-dom';
 
 const TICKER_ITEMS = [
   'FREELANCER', 'UI/UX DESIGNER', 'WEB DESIGN', 'BRANDING DESIGN',
@@ -25,8 +27,19 @@ const TickerRow = ({ reverse }) => (
 );
 
 const PersonalHeader = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.heroWrapper}>
+
+      {/* ── Back button ── */}
+      <button
+        className={styles.backBtn}
+        onClick={() => navigate('/')}
+        aria-label="Back to home"
+      >
+        <ArrowBackIcon style={{ fontSize: 16 }} />
+        <span>Home</span>
+      </button>
 
       {/* ── Hero ── */}
       <main className={styles.mainContent}>

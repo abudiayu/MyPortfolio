@@ -11,7 +11,7 @@ const CODING_VIDEOS = [
   { id: 'bMknfKXIFA8', title: 'React in 100 Seconds',           channel: 'Fireship'        },
   { id: 'Tn6-PIqc4UM', title: 'React in 2025 – Full Course',    channel: 'freeCodeCamp'    },
   { id: 'w7ejDZ8SWv8', title: 'JavaScript Full Course',         channel: 'freeCodeCamp'    },
-  { id: 'pN_lm6QqHcw', title: 'Node.js Crash Course',           channel: 'Traversy Media'  },
+  { id: 'fBNz5xF-Kx4', title: 'Node.js Crash Course',           channel: 'Traversy Media'  },
   { id: 'SqcY0GlETPk', title: 'React + TypeScript Tutorial',    channel: 'Jack Herrington' },
   { id: 'RVFAyFWO4go', title: 'CSS Tips Every Dev Should Know', channel: 'Kevin Powell'    },
 ];

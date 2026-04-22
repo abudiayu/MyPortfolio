@@ -177,3 +177,33 @@
   .heroTitle { font-size: 3rem; }
   .bgText { font-size: 20vw; }
 }
+
+/* ── Fixed Home Button ── */
+.homeBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(13, 15, 30, 0.85);
+  border: 1px solid rgba(91, 82, 240, 0.4);
+  color: #a5b4fc;
+  padding: 9px 18px 9px 12px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.homeBtn:hover {
+  background: rgba(91, 82, 240, 0.3);
+  border-color: #5b52f0;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(91, 82, 240, 0.35);
+}

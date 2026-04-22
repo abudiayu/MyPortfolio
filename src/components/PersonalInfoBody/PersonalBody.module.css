@@ -24,6 +24,32 @@
 
 .container > * { position: relative; z-index: 1; }
 
+/* ── Back to Home ── */
+.goto_home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  padding: 10px 20px 10px 14px;
+  background: rgba(91,82,240,0.1);
+  border: 1px solid rgba(91,82,240,0.3);
+  border-radius: 30px;
+  color: #a5b4fc;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s, color 0.25s;
+  user-select: none;
+}
+
+.goto_home:hover {
+  background: rgba(91,82,240,0.25);
+  border-color: #5b52f0;
+  color: white;
+  transform: translateX(-4px);
+}
+
 /* ── Intro Section ── */
 .introSection {
   display: grid;
@@ -48,7 +74,7 @@
   border-radius: 20px;
   object-fit: cover;
   object-position: top;
-  border: 2px solid rgba(91,82,240,0.5);
+  border: 1px solid rgba(91,82,240,0.5);
   position: relative;
   z-index: 2;
   display: block;
@@ -333,56 +359,129 @@
   opacity: 0.5;
 }
 
-/* ── Quote ── */
-.quoteBlock {
-  background: linear-gradient(135deg, rgba(91,82,240,0.15), rgba(167,139,250,0.05));
-  border: 1px solid rgba(91,82,240,0.3);
-  border-radius: 28px;
-  padding: 60px 80px;
+/* ── Client Comments ── */
+.clientsSection {
   margin-bottom: 100px;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
 }
 
-.quoteBlock::before {
+.scrollTrack {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.scrollTrack:active { cursor: grabbing; }
+
+/* hide scrollbar but keep scroll */
+.scrollTrack::-webkit-scrollbar { height: 4px; }
+.scrollTrack::-webkit-scrollbar-track { background: rgba(255,255,255,0.04); border-radius: 4px; }
+.scrollTrack::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }
+.scrollTrack::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+.clientCard {
+  flex-shrink: 0;
+  width: 320px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px;
+  padding: 28px 26px;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s;
+}
+
+.clientCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 0 1px var(--accent);
+}
+
+.clientCard::before {
   content: '"';
   position: absolute;
-  top: -20px;
-  left: 40px;
-  font-size: 200px;
+  top: -10px;
+  right: 16px;
+  font-size: 100px;
   font-weight: 900;
-  color: rgba(91,82,240,0.08);
+  color: var(--accent);
+  opacity: 0.07;
   line-height: 1;
-  pointer-events: none;
   font-family: Georgia, serif;
+  pointer-events: none;
 }
 
-.quoteIcon {
-  color: #5b52f0;
-  font-size: 2.5rem !important;
-  opacity: 0.6;
-  margin-bottom: 16px;
+.clientTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
-.quoteBlock p {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 500;
-  color: #e2e8f0;
-  line-height: 1.8;
-  font-style: italic;
-  margin-bottom: 20px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.quoteBlock span {
-  font-size: 0.85rem;
-  color: #5b52f0;
-  font-weight: 700;
+.clientAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
   letter-spacing: 0.05em;
 }
+
+.clientName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0 0 2px;
+}
+
+.clientRole {
+  font-size: 0.72rem;
+  color: #4b5563;
+  margin: 0;
+  font-weight: 500;
+}
+
+.clientStars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.clientComment {
+  font-size: 0.88rem;
+  color: #9ca3af;
+  line-height: 1.75;
+  margin: 0;
+  font-style: italic;
+}
+
+.clientAccentLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 0 0 20px 20px;
+}
+
+.clientCard:hover .clientAccentLine { opacity: 1; }
+
+/* ── Quote (hidden) ── */
+.quoteBlock { display: none; }
+.quoteBlock::before { display: none; }
+.quoteIcon { display: none; }
 
 /* ── Skills ── */
 .skillsSection { margin-bottom: 40px; }
@@ -391,130 +490,127 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
+  align-items: start;
 }
 
 .skillCard {
   position: relative;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 16px;
-  padding: 28px 16px 22px;
+  background: var(--bg, rgba(255,255,255,0.03));
+  border: 2px solid var(--accent);
+  border-radius: 18px;
+  padding: 22px 14px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   cursor: default;
-  overflow: hidden;
-  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s, border-color 0.3s, background 0.3s;
+  overflow: visible;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
   animation: fadeUp 0.5s ease both;
+  box-shadow: 4px 4px 0px var(--accent);
 }
 
 .skillCard:hover {
-  transform: translateY(-8px) scale(1.03);
-  border-color: var(--accent);
-  background: rgba(255,255,255,0.04);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 0 1px var(--accent), inset 0 0 30px rgba(255,255,255,0.02);
+  transform: rotate(0deg) translateY(-8px) scale(1.05);
+  box-shadow: 6px 6px 0px var(--accent), 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Sketch corner brackets */
-.skillCornerTL,
-.skillCornerBR {
+/* Fun emoji tag at top */
+.skillTag {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  opacity: 0;
-  transition: opacity 0.3s;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #0d0f1e;
+  font-size: 0.58rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.skillCornerTL {
-  top: 8px;
-  left: 8px;
-  border-top: 2px solid var(--accent);
-  border-left: 2px solid var(--accent);
-  border-radius: 2px 0 0 0;
-}
-
-.skillCornerBR {
-  bottom: 8px;
-  right: 8px;
-  border-bottom: 2px solid var(--accent);
-  border-right: 2px solid var(--accent);
-  border-radius: 0 0 2px 0;
-}
-
-.skillCard:hover .skillCornerTL,
-.skillCard:hover .skillCornerBR {
-  opacity: 1;
-}
-
-/* Glow blob behind symbol */
+/* Glow blob */
 .skillCard::before {
   content: '';
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  inset: 0;
+  border-radius: 16px;
   background: var(--accent);
   opacity: 0;
-  filter: blur(20px);
+  filter: blur(24px);
   transition: opacity 0.4s;
   pointer-events: none;
+  z-index: -1;
 }
+.skillCard:hover::before { opacity: 0.1; }
 
-.skillCard:hover::before { opacity: 0.18; }
-
-.skillSymbol {
-  font-size: 2rem;
-  line-height: 1;
-  color: var(--accent);
-  display: block;
+.skillIconWrap {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
   transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-  filter: drop-shadow(0 0 6px var(--accent));
+  margin-top: 6px;
 }
 
-.skillCard:hover .skillSymbol {
-  transform: scale(1.2) rotate(-5deg);
+.skillCard:hover .skillIconWrap {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.skillIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  transition: filter 0.3s;
+}
+
+.skillCard:hover .skillIcon {
+  filter: drop-shadow(0 0 8px var(--accent));
 }
 
 .skillName {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 800;
   color: #e2e8f0;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .skillDesc {
   font-size: 0.65rem;
-  color: #4b5563;
-  font-weight: 500;
+  color: var(--accent);
+  font-weight: 600;
   text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-/* Animated sketch underline */
-.skillLine {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 2px;
-  transition: width 0.4s ease;
   opacity: 0.7;
 }
 
-.skillCard:hover .skillLine { width: 60%; }
+/* Three dots like a blog card footer */
+.skillDots {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+.skillDots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.4;
+}
+.skillCard:hover .skillDots span { opacity: 1; }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: rotate(var(--tilt, 0deg)) translateY(24px); }
+  to   { opacity: 1; transform: rotate(var(--tilt, 0deg)) translateY(0); }
 }
 
 /* ── Responsive ── */
@@ -522,8 +618,7 @@
   .container { padding: 80px 6% 100px; }
   .skillsGrid { grid-template-columns: repeat(3, 1fr); }
   .book { width: 95px; height: 210px; }
-}
-@media (max-width: 768px) {
+}@media (max-width: 768px) {
   .container { padding: 50px 5% 80px; }
 
   .introSection {

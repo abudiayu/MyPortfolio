@@ -1,0 +1,321 @@
+.footer {
+  background: #080a14;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* ── Main contact area ── */
+.main {
+  display: grid;
+  grid-template-columns: 60px 1fr 80px;
+  align-items: center;
+  padding: 60px 5%;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(91,82,240,0.06) 0%, transparent 50%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 41px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 41px
+    );
+}
+
+/* ── Socials (left vertical stack) ── */
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.04);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.socialBtn:hover {
+  border-color: #5b52f0;
+  background: rgba(91,82,240,0.2);
+  transform: scale(1.1);
+}
+
+.socialBtnPrimary {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #5b52f0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.socialBtnPrimary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(91,82,240,0.5);
+}
+
+/* ── Center ── */
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.phone {
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  transition: color 0.2s;
+}
+.phone:hover { color: #5b52f0; }
+
+.email {
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  transition: color 0.2s;
+}
+.email:hover { color: #5b52f0; }
+
+.nav {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+}
+.nav a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+.nav a:hover { color: white; }
+
+/* ── Right buttons ── */
+.rightBtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactVertical {
+  background: #5b52f0;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s;
+  min-height: 120px;
+}
+.contactVertical:hover {
+  background: #4a43d4;
+  transform: scale(1.04);
+}
+
+.arrowBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #5b52f0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.arrowBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(91,82,240,0.5);
+}
+
+/* ── Bottom bar ── */
+.bottomBar {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 18px 5%;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 1.28rem;
+}
+
+.copyrightLine {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.year {
+  color: white;
+  font-weight: 700;
+}
+
+.brandName {
+  color: #5b52f0;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+.brandName:hover { color: #a5b4fc; }
+
+.rights {
+  color: #4b5563;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 1.28rem;
+  color: white;
+}
+.brandLogo { height: 18px; }
+
+.address {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.addressLabel {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: white;
+}
+
+.addressText {
+  font-size: 1.28rem;
+  color: #4b5563;
+}
+
+/* ── Big tagline ── */
+.tagline {
+  padding: 30px 4% 20px;
+  line-height: 0.9;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.taglineLight {
+  font-size: clamp(2rem, 8vw, 7rem);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255,255,255,0.35);
+  letter-spacing: -2px;
+}
+
+
+.taglineBold {
+  font-size: clamp(2rem, 8vw, 7rem);
+  font-weight: 900;
+  color: white;
+  /* letter-spacing: 2px; */
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+    padding: 40px 6%;
+  }
+
+  .socials {
+    flex-direction: row;
+    justify-content: center;
+    order: 3;
+  }
+
+  .center { order: 1; }
+  .phone, .email { font-size: clamp(1.1rem, 5.5vw, 1.6rem); }
+  .nav { justify-content: center; gap: 20px; }
+
+  .rightBtns {
+    flex-direction: row;
+    justify-content: center;
+    order: 2;
+  }
+  .contactVertical {
+    writing-mode: horizontal-tb;
+    min-height: unset;
+    padding: 10px 22px;
+    font-size: 0.7rem;
+  }
+
+  .bottomBar {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+    padding: 20px 6%;
+  }
+  .brand { justify-content: center; }
+  .address { text-align: center; align-items: center; }
+  .copyright { align-items: center; }
+  .copyrightLine { justify-content: center; }
+
+  .tagline { padding: 16px 4% 12px; }
+  .taglineLight { font-size: clamp(1.8rem, 11vw, 2.5rem); letter-spacing: -1px; }
+  .taglineBold { font-size: clamp(1.6rem, 9vw, 3.5rem); letter-spacing: -1px; }
+}
+
+@media (max-width: 480px) {
+  .phone, .email { font-size: clamp(0.95rem, 5vw, 1.3rem); }
+  .taglineLight,
+  .taglineBold { font-size: clamp(1.2rem, 10vw, 2.5rem); }
+  .nav { gap: 12px; }
+  .nav a { font-size: 0.68rem; }
+  .main { padding: 30px 5%; gap: 22px; }
+}
