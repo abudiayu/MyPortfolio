@@ -30,7 +30,7 @@ function Home({ showSidebar }) {
                     <div className={classes.header_side_icon}>
                         <Link href= "#"><HomeIcon/></Link>
                         <RouterLink to="/personal-info" className={classes.personalInfoLink}>
-                            <PersonIcon/>
+                            <PersonIcon/>abudi
                         </RouterLink>
                         <Link href=" https://github.com/abudiayu" ><GitHubIcon/></Link>
                     </div>

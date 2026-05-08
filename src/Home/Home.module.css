@@ -19,8 +19,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 60px;
-    height: 100vh;
+    width: 90px;
+    height: 90vh;
     background-color: #0a1929;
     z-index: 100;
     display: flex;
@@ -31,6 +31,8 @@
     transform: translateX(0);
     transition: opacity 0.5s ease, transform 0.5s ease;
     pointer-events: auto;
+    margin-left: 30px;
+    border-radius: 0px 0 50px 50px;
 }
 
 .header_side_container.hidden {
@@ -114,7 +116,7 @@
 .header_side_icon svg {
     display: block;
     color: #8b949e;
-    font-size: 24px;
+    font-size: 40px;
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -431,7 +433,12 @@
     }
 
     .header_side_container {
-        width: 50px;
+        width: 20px;
+        margin-left: 0px;
+        height: 80vh;
+        border-radius: 0 50px 50px 0;
+        margin-top: 20px;
+        background-color: #296692d2;
     }
 
     .header_side_wrapper img {
@@ -485,7 +492,7 @@
     }
 
     .header_text_container::before {
-        content: '✨';
+        content: '';
         position: absolute;
         top: -30px;
         left: 50%;
@@ -604,14 +611,14 @@
     }
 
     .header_container::before {
-        content: '⚡';
+        content: '';
         font-size: 2.5rem;
         top: 8%;
         right: 8%;
     }
 
     .header_container::after {
-        content: '🎯';
+        content: '';
         font-size: 2rem;
         bottom: 12%;
         left: 12%;
@@ -742,6 +749,9 @@
   color: inherit;
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: 10px;
+  color: #ffd700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .personalInfoLink:hover {
