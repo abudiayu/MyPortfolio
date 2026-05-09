@@ -20,7 +20,7 @@ function Projucts() {
       description: "Student managemnet system for Privet Accadamy.",
       tech: ["JavaScript", "Next.js", "Node.js","Taillwind"],
       link: "https://sms-thumblian.vercel.app/",
-      image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
+      image: "https://s3-alpha.figma.com/hub/file/2342803295004297908/da5c9b2e-dde3-483d-9439-00838f82be8f-cover.png",
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
     },    
 

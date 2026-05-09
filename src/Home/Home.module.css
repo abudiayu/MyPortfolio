@@ -413,7 +413,7 @@
     }
 
     .header_container::before {
-        content: '💻';
+        content: '';
         position: absolute;
         top: 10%;
         right: 10%;
@@ -423,7 +423,7 @@
     }
 
     .header_container::after {
-        content: '🚀';
+        content: '';
         position: absolute;
         bottom: 15%;
         left: 15%;
@@ -625,7 +625,7 @@
     }
 
     .header_side_container {
-        width: 65px;
+        width: 55px;
     }
 
     .header_side_wrapper img {

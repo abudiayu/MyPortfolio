@@ -66,6 +66,21 @@ const books = [
     tag: "Favorite",
   },
   {
+    title: "Rich Dad Poor Dad",
+    author: "Robert Ciosaki",
+    color: "#f20d0df4",
+    spine: "#f04c10",
+    tag: "Flowchart",
+  },
+
+  {
+    title: "Think& Growrich",
+    author: "Dill Carnege",
+    color: "#eef60985",
+    spine: "#decc0ed2",
+    tag: "Besinuss Mind",
+  },
+  {
     title: "Atomic Habits",
     author: "James Clear",
     color: "#3a1a1a",

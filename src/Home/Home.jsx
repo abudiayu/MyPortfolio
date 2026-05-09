@@ -51,7 +51,7 @@ function Home({ showSidebar }) {
                             <span className={classes.imText}>I'm</span>{' '}
                             <img src={Aqadr} alt="Aqadr" className={classes.name_img} />
                             <br />
-                            <span className={classes.webDeveloper}>Web Developer.</span>
+                            <span className={classes.webDeveloper}>Full-Stack Developer.</span>
                             <p>Software Developer Basic Skill's are JavaScript | React | NodeJs| Laravel | Python | MongoDB ...</p>
                         </div>
                         <div className={classes.header_contact}>
