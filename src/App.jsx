@@ -27,33 +27,31 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const contactSection = document.getElementById('contact');
-    
-    if (!contactSection) return;
+    const sectionsToHide = [
+      document.getElementById('contact'),
+      document.getElementById('projects'),
+    ].filter(Boolean);
+
+    if (sectionsToHide.length === 0) return;
+
+    const visible = new Set();
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setShowSidebar(false);
+            visible.add(entry.target);
           } else {
-            setShowSidebar(true);
+            visible.delete(entry.target);
           }
         });
+        setShowSidebar(visible.size === 0);
       },
-      {
-        threshold: 0.1,
-        rootMargin: '-100px 0px 0px 0px'
-      }
+      { threshold: 0.1, rootMargin: '-100px 0px 0px 0px' }
     );
 
-    observer.observe(contactSection);
-
-    return () => {
-      if (contactSection) {
-        observer.unobserve(contactSection);
-      }
-    };
+    sectionsToHide.forEach((el) => observer.observe(el));
+    return () => sectionsToHide.forEach((el) => observer.unobserve(el));
   }, []);
 
   const scrollToTop = () => {
