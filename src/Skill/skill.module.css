@@ -163,3 +163,66 @@
         padding: 15px;
     }
 }
+
+/* ── mountain wave divider ──────────────────────────────── */
+.skill_container {
+  position: relative; /* ensure absolute children work */
+}
+
+.dividerWrap {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+
+@media (min-width: 640px)  { .dividerWrap { height: 240px; } }
+@media (min-width: 1024px) { .dividerWrap { height: 300px; } }
+
+.divSvg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* back dune — blurred, furthest depth */
+.divL1 {
+  filter: blur(14px);
+  animation: duneDrift1 13s ease-in-out infinite;
+}
+
+/* mid dune */
+.divL2 {
+  filter: blur(4px);
+  animation: duneDrift2 10s ease-in-out infinite;
+}
+
+/* front dune — sharpest */
+.divL3 {
+  filter: blur(1px);
+  animation: duneDrift3 8s ease-in-out infinite;
+}
+
+/* floor seal */
+.divL4 {
+  animation: none;
+}
+
+@keyframes duneDrift1 {
+  0%, 100% { transform: translateX(0) scaleX(1); }
+  50%       { transform: translateX(-18px) scaleX(1.015); }
+}
+@keyframes duneDrift2 {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(14px); }
+}
+@keyframes duneDrift3 {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(-10px); }
+}
