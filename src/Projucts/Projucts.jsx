@@ -78,18 +78,6 @@ const PROJECTS = [
   },
   {
     number: '07',
-    category: 'Personal',
-    title: 'Airbnb Clone',
-    live:   'https://babilon-air.netlify.app/',
-    github: 'https://babilon-air.netlify.app/',
-    images: {
-      leftTop:    'https://c8.alamy.com/comp/2M0W154/smartphone-with-logo-of-american-homestay-marketplace-company-airbnb-inc-on-screen-in-front-of-business-website-focus-on-right-of-phone-display-2M0W154.jpg',
-      leftBottom: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
-      right:      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=1200&fit=crop',
-    },
-  },
-  {
-    number: '08',
     category: 'Client',
     title: 'Barber Shop',
     live:   'https://telwindberber.netlify.app/',
@@ -98,6 +86,18 @@ const PROJECTS = [
       leftTop:    'https://img.freepik.com/premium-vector/classic-barber-shop-banner-template_941802-3639.jpg',
       leftBottom: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&h=600&fit=crop',
       right:      'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&h=1200&fit=crop',
+    },
+  },
+  {
+    number: '08',
+    category: 'Personal',
+    title: 'Airbnb Clone',
+    live:   'https://babilon-air.netlify.app/',
+    github: 'https://babilon-air.netlify.app/',
+    images: {
+      leftTop:    'https://c8.alamy.com/comp/2M0W154/smartphone-with-logo-of-american-homestay-marketplace-company-airbnb-inc-on-screen-in-front-of-business-website-focus-on-right-of-phone-display-2M0W154.jpg',
+      leftBottom: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
+      right:      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=1200&fit=crop',
     },
   },
 ]
