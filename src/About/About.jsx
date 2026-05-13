@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import styles from './about.module.css'
+import styles from "./About.module.css"
 
 /* ── 3D decorative icons ── */
 const LEFT_ICONS = [
