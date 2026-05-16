@@ -43,13 +43,13 @@ const PROJECTS = [
   {
     number: '04',
     category: 'Personal',
-    title: 'Interactive Game',
-    live:   'https://github.com/abudiayu/snakeGame',
-    github: 'https://github.com/abudiayu/snakeGame',
+    title: 'Dental Clinic Site',
+    live:   'https://dr-mz-clinick.vercel.app/',
+    github: 'https://github.com/abudiayu/DR-DentalClinick',
     images: {
-      leftTop:    'https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&h=600&fit=crop',
-      leftBottom: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop',
-      right:      'https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&h=1200&fit=crop',
+      leftTop:    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv4w4-UzeaafEZlZYjK7WRW-sZRytZynkUPg&s',
+      leftBottom: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFiWuMNA_UGs24vmkapw7gn73v3qRpRLDQJg&s',
+      right:      'https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/bcf429213688141.69ca92ca6d5f8.png',
     },
   },
   {
