@@ -26,11 +26,12 @@ function Home({ showSidebar }) {
         <header className= {classes.header_container}>
             <div className={`${classes.header_side_container} ${!showSidebar ? classes.hidden : ''}`}>
                 <div className={ classes.header_side_wrapper}>
-                    <img src={aqadir} alt="Profile" className={classes.profileImg} />
+                    
                     <div className={classes.header_side_icon}>
                         <Link href= "#"><HomeIcon/></Link>
                         <RouterLink to="/personal-info" className={classes.personalInfoLink}>
-                            <PersonIcon/>abudi
+                            <PersonIcon/>
+                            <span>abudi</span>
                         </RouterLink>
                         <Link href=" https://github.com/abudiayu" ><GitHubIcon/></Link>
                     </div>
@@ -38,7 +39,7 @@ function Home({ showSidebar }) {
                         <Link href="https://www.instagram.com/abdul.qadir0101/"><InstagramIcon/></Link>
                         <Link href="https://web.telegram.org/@AbudyTy"><TelegramIcon /></Link>
                         <Link href="https://www.whatsapp.com/"><WhatsAppIcon/></Link>
-                        <Link href="mailto:abudiayuu@gmail.com"><EmailIcon/></Link>
+                        <Link href="mailto:abudiayuu@gmail.com" className={classes.emailLink}><EmailIcon/></Link>
                     </div>
                 </div>
             </div>
