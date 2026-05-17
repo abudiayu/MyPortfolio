@@ -1,121 +1,115 @@
-import React from 'react'
-import classes from "./contact.module.css";
-import { Twitter, Instagram, LinkedIn, Facebook, GitHub, Email,Telegram } from '@mui/icons-material';
-import abudy from "../assets/abudy.jpg";
+import { useState } from 'react'
+import EmailIcon from '@mui/icons-material/Email';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import CloseIcon from '@mui/icons-material/Close';
+import SendIcon from '@mui/icons-material/Send';
+import abudyLogo from '../assets/abudy_logo.png';
+import CallMadeIcon from '@mui/icons-material/CallMade';
+import CheckIcon from '@mui/icons-material/Check';
+import { Link } from 'react-router-dom'
+import "./contact.css"
 
 function Contact() {
-  const socialLinks = [
-    {
-      platform: "Telegram",
-      text: "Add me on Facebook",
-      username: "@abdulqadir",
-      icon: <Telegram />,
-      color: "#3ba1ef",
-      link: "https://web.telegram.org/@AbudyTy"
-    },
-    {
-      platform: "Facebook",
-      text: "Add me on Facebook",
-      username: "@abdulqadir",
-      icon: <Facebook />,
-      color: "#1877F2",
-      link: "https://web.facebook.com/profile.php?id=61579876913486"
-    },
-    {
-      platform: "Instagram",
-      text: "My Vines on Instagram",
-      username: "@abudy",
-      icon: <Instagram />,
-      color: "#e84a06",
-      link: "https://www.instagram.com/abdul.qadir0101/"
-    },
-    {
-      platform: "LinkedIn",
-      text: "Connect on LinkedIn",
-      username: "@abdulqadir",
-      icon: <LinkedIn />,
-      color: "#0077B5",
-      link: "https://www.linkedin.com/in/abdul-kadir-0b1aa637b/"
-    },
-    {
-      platform: "GitHub",
-      text: "Check my GitHub",
-      username: "@abudiayu",
-      icon: <GitHub />,
-      color: "#333",
-      link: "https://github.com/@abudiayu"
-    },
-    {
-      platform: "Email",
-      text: "Send me an Email",
-      username: "abudiayuu@gmail.com",
-      icon: <Email />,
-      color: "#EA4335",
-      link: "mailto:abudiayuu@gmail.com"
-    }
-  ];
+  const [open, setOpen] = useState(false);
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [sent, setSent] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const mailto = `mailto:abudiayuu@gmail.com?subject=Message from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(`From: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+    window.location.href = mailto;
+    setSent(true);
+    setTimeout(() => { setOpen(false); setSent(false); setForm({ name: '', email: '', message: '' }); }, 1500);
+  };
   return (
     <>
-      <section id="contact" className={`${classes.contact_container} contact_container`}>
-        <div className={classes.contact_wrapper}>
-          <div className={classes.contact_left}>
-            <div className={classes.profile_card}>
-              <div className={classes.profile_image}>
-                <img src={abudy} alt="Profile" />
-              </div>
-              <h2>Abdul Qadir</h2>
-              <p className={classes.username}>@abdulqadir</p>
-              <p className={classes.location}>Addis, Ethiopia</p>
-              
-              <div className={classes.stats}>
-                <div className={classes.stat_item}>
-                  <h3>1.2K</h3>
-                  <p>Followers</p>
-                </div>
-                <div className={classes.stat_item}>
-                  <h3>327</h3>
-                  <p>Following</p>
-                </div>
-              </div>
-              
-              <p className={classes.bio}>
-                Hi there! I'm a Programmer with more than 4 years of experience and want to help you to contact me with social media.
-              </p>
-              
-              <div className={classes.action_buttons}>
-                <button className={classes.follow_btn}>Follow</button>
-                <button className={classes.message_btn}>Message</button>
-              </div>
-            </div>
+    <div className="footer_wrapper">
+
+
+    <section className="contact_container">
+        <h2 className="contact_heading" onClick={() => setOpen(true)}>
+          Lest <span className="luxury_span">Talck</span> 
+          <div className="luxury_span_arrow">
+          <CallMadeIcon className='arrow_Icon'  style={{ fontSize: 18, marginLeft: 4 }} />
           </div>
-          
-          <div className={classes.contact_right}>
-            <h1>SOCIAL LINKS</h1>
-            <div className={classes.social_links}>
-              {socialLinks.map((social, index) => (
-                <a 
-                  key={index} 
-                  href={social.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={classes.social_card}
-                >
-                  <div className={classes.social_icon} style={{ backgroundColor: social.color }}>
-                    {social.icon}
-                  </div>
-                  <div className={classes.social_info}>
-                    <h3>{social.text}</h3>
-                    <p>{social.username}</p>
-                  </div>
-                  <div className={classes.arrow_icon}>→</div>
-                </a>
-              ))}
-            </div>
-          </div>
+        </h2>
+    </section>
+
+    {/* ── Email popup modal ── */}
+    {open && (
+      <div className="modal_overlay" onClick={() => setOpen(false)}>
+        <div className="modal_box" onClick={e => e.stopPropagation()}>
+          <button className="modal_close" onClick={() => setOpen(false)}><CloseIcon /></button>
+          <h3 className="modal_title">Send me a message</h3>
+          <p className="modal_sub">I'll get back to you as soon as possible.</p>
+
+          {sent ? (
+            <p className="modal_sent"><CheckIcon /> Opening your email client...</p>
+          ) : (
+            <form className="modal_form" onSubmit={handleSubmit}>
+              <input
+                className="modal_input"
+                type="text"
+                placeholder="Your name"
+                required
+                value={form.name}
+                onChange={e => setForm({ ...form, name: e.target.value })}
+              />
+              <input
+                className="modal_input"
+                type="email"
+                placeholder="Your email"
+                required
+                value={form.email}
+                onChange={e => setForm({ ...form, email: e.target.value })}
+              />
+              <textarea
+                className="modal_textarea"
+                placeholder="Your message..."
+                required
+                rows={5}
+                value={form.message}
+                onChange={e => setForm({ ...form, message: e.target.value })}
+              />
+              <button className="modal_send_btn" type="submit">
+                <SendIcon style={{ fontSize: 16 }} /> Send Message
+              </button>
+            </form>
+          )}
         </div>
-        <div className={classes.copy}>@Copy wright is reserived to Abdul Qadir</div>
-      </section>
+      </div>
+    )}
+
+    <section className="footer_icon_wrapper">
+      {/* icons row with side lines */}
+      <div className="footer_icon_row">
+        <span className="footer_line" />
+        <div className="footer_icon_container">
+          <Link href="https://web.facebook.com/profile.php?id=61579876913486" target="_blank" rel="noopener noreferrer"><FacebookIcon /></Link>
+          <Link href="https://www.instagram.com/abdul.qadir0101/" target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
+          <Link href="https://web.telegram.org/@AbudyTy" target="_blank" rel="noopener noreferrer"><TelegramIcon /></Link>
+          <Link href="https://www.linkedin.com/in/abdul-kadir-0b1aa637b/" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></Link>
+          <Link href="https://github.com/abudiayu" target="_blank" rel="noopener noreferrer"><GitHubIcon /></Link>
+          <Link href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer"><WhatsAppIcon /></Link>
+          <Link href="mailto:abudiayuu@gmail.com"><EmailIcon /></Link>
+        </div>
+        <span className="footer_line" />
+      </div>
+
+      {/* brand name */}
+      <div className="footer_logo_wrap">
+        <img src={abudyLogo} alt="Abudy Logo" className="footer_logo" />
+      </div>
+
+      {/* copyright */}
+      <p className="footer_copy">© Copyright reserved to Abdul Qadir</p>
+    </section>
+        </div>
     </>
   )
 }
