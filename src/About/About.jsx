@@ -26,7 +26,7 @@ const RIGHT_ICONS = [
 ]
 
 const PARAGRAPH =
-  "With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!"
+  "With more than five years of experience in software and website development, I specialize in building modern, user-focused digital solutions that combine performance, functionality, and great design. My focus includes web development, user experience, and creating strong online platforms that help businesses stand out and grow. I enjoy collaborating with ambitious brands and turning ideas into powerful, engaging digital experiences. Let’s build something incredible together!"
 
 /* ── floating icon ── */
 function Icon({ src, delay, floatDuration, fromX }) {
