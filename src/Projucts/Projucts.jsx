@@ -97,7 +97,7 @@ const PROJECTS = [
     images: {
       leftTop:    'https://c8.alamy.com/comp/2M0W154/smartphone-with-logo-of-american-homestay-marketplace-company-airbnb-inc-on-screen-in-front-of-business-website-focus-on-right-of-phone-display-2M0W154.jpg',
       leftBottom: 'https://cdn.dribbble.com/userupload/26284611/file/original-9f4a1ae268e9fe9a835fff727dd8c423.jpg?format=webp&resize=400x300&vertical=center',
-      right:      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmIT9MVU1R1dvthJqUvDpp1iuvl0zfDOt0Gw&s',
+      right:      'https://screenshots.webflow.com/sites/6214ab9c9c02f62db5a16765/20220225040706_52b2d4264c949a71f2e1242205922d00.png',
     },
   },
 ]
