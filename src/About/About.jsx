@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import styles from "./About.module.css"
 
-/* ── 3D decorative icons ── */
 const LEFT_ICONS = [
   {
     src: 'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png',
@@ -28,7 +27,6 @@ const RIGHT_ICONS = [
 const PARAGRAPH =
   "With more than five years of experience in software and website development, I specialize in building modern, user-focused digital solutions that combine performance, functionality, and great design. My focus includes web development, user experience, and creating strong online platforms that help businesses stand out and grow. I enjoy collaborating with ambitious brands and turning ideas into powerful, engaging digital experiences. Let’s build something incredible together!"
 
-/* ── floating icon ── */
 function Icon({ src, delay, floatDuration, fromX }) {
   return (
     <motion.div
@@ -60,7 +58,6 @@ function Icon({ src, delay, floatDuration, fromX }) {
   )
 }
 
-/* ── scroll-driven character reveal ── */
 function AnimatedText() {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -73,7 +70,6 @@ function AnimatedText() {
       {chars.map((char, i) => {
         const start = i / chars.length
         const end   = Math.min((i + 1) / chars.length, 1)
-        // eslint-disable-next-line react-hooks/rules-of-hooks
         const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1])
         return (
           <span key={i} className={styles.charWrap} aria-hidden="true">
@@ -88,7 +84,6 @@ function AnimatedText() {
   )
 }
 
-/* ── contact button ── */
 function ContactButton() {
   const go = () => {
     const el = document.getElementById('contact')
@@ -104,26 +99,24 @@ function ContactButton() {
       transition={{ duration: 0.7, delay: 0.5 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.97 }}
+      
     >
       Contact Me
     </motion.button>
   )
 }
 
-/* ── section ── */
 export default function About() {
   return (
     <section id="about" className={styles.section}>
       <div className={styles.grid}>
 
-        {/* left icon column */}
         <div className={styles.leftIcons}>
           {LEFT_ICONS.map((icon, i) => (
             <Icon key={i} {...icon} fromX={-80} />
           ))}
         </div>
 
-        {/* center content */}
         <div className={styles.center}>
           <motion.h2
             className={styles.heading}
@@ -141,7 +134,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* right icon column */}
         <div className={styles.rightIcons}>
           {RIGHT_ICONS.map((icon, i) => (
             <Icon key={i} {...icon} fromX={80} />

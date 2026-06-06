@@ -1,5 +1,5 @@
 import styles from "./PersonalBody.module.css";
-import profileImg from '../../assets/home_me-.png';
+import profileImg from '../../assets/abudy.jpg';
 import CodeIcon from '@mui/icons-material/Code';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import StarIcon from '@mui/icons-material/Star';
@@ -100,6 +100,7 @@ const books = [
     color: "#2a1a0a",
     spine: "#fb923c",
     tag: "Technical",
+    onClick: () => window.open('https://m.media-amazon.com/images/I/71LCi6lP1RL._SL1500_.jpg'),
   },
 ];
 

@@ -11,7 +11,7 @@ import SendIcon from '@mui/icons-material/Send';
 import abudyLogo from '../assets/abudy_logo.png';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import CheckIcon from '@mui/icons-material/Check';
-import { Link } from 'react-router-dom'
+import Link from '@mui/material/Link';
 import "./contact.css"
 
 function Contact() {
@@ -90,23 +90,20 @@ function Contact() {
       <div className="footer_icon_row">
         <span className="footer_line" />
         <div className="footer_icon_container">
-          <Link href="https://web.facebook.com/profile.php?id=61579876913486" target="_blank" rel="noopener noreferrer"><FacebookIcon /></Link>
-          <Link href="https://www.instagram.com/abdul.qadir0101/" target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
-          <Link href="https://web.telegram.org/@AbudyTy" target="_blank" rel="noopener noreferrer"><TelegramIcon /></Link>
-          <Link href="https://www.linkedin.com/in/abdul-kadir-0b1aa637b/" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></Link>
-          <Link href="https://github.com/abudiayu" target="_blank" rel="noopener noreferrer"><GitHubIcon /></Link>
-          <Link href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer"><WhatsAppIcon /></Link>
-          <Link href="mailto:abudiayuu@gmail.com"><EmailIcon /></Link>
+          <Link href="https://web.facebook.com/profile.php?id=61579876913486" target="_blanck"><FacebookIcon /></Link>
+          <Link href="https://www.instagram.com/abdul.qadir0101/" target="_blanck"><InstagramIcon /></Link>
+          <Link href="https://t.me/AbudyTy" target="_blanck"><TelegramIcon /></Link>
+          <Link href="https://www.linkedin.com/in/abdul-kadir-0b1aa637b/" target="_blanck"><LinkedInIcon /></Link>
+          <Link href="https://github.com/abudiayu" target="_blanck"><GitHubIcon /></Link>
+          <Link href="https://www.whatsapp.com/" target="_blanck"><WhatsAppIcon /></Link>
+          <Link href="mailto:abudiayuu@gmail.com" className="emailLink" onClick={() => setOpen(true)} ><EmailIcon /></Link>
         </div>
         <span className="footer_line" />
       </div>
-
-      {/* brand name */}
       <div className="footer_logo_wrap">
         <img src={abudyLogo} alt="Abudy Logo" className="footer_logo" />
       </div>
 
-      {/* copyright */}
       <p className="footer_copy">© Copyright reserved to Abdul Qadir</p>
     </section>
         </div>

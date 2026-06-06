@@ -29,10 +29,8 @@ function Skill() {
         ))}
       </div>
 
-      {/* ── mountain wave divider → About section ── */}
       <div className={classes.dividerWrap} aria-hidden="true">
 
-        {/* layer 1: blurred back dune — darkest, furthest */}
         <svg className={`${classes.divSvg} ${classes.divL1}`}
           viewBox="0 0 1440 260" preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +38,6 @@ function Skill() {
             fill="rgba(180,195,210,0.35)" />
         </svg>
 
-        {/* layer 2: mid dune — medium depth */}
         <svg className={`${classes.divSvg} ${classes.divL2}`}
           viewBox="0 0 1440 260" preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +52,6 @@ function Skill() {
             fill="url(#duneGrad2)" />
         </svg>
 
-        {/* layer 3: front dune — brightest, closest */}
         <svg className={`${classes.divSvg} ${classes.divL3}`}
           viewBox="0 0 1440 260" preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +66,7 @@ function Skill() {
             fill="url(#duneGrad3)" />
         </svg>
 
-        {/* layer 4: floor fill — solid dark, seals the bottom */}
+
         <svg className={`${classes.divSvg} ${classes.divL4}`}
           viewBox="0 0 1440 260" preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg">

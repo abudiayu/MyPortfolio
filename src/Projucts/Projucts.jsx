@@ -100,6 +100,18 @@ const PROJECTS = [
       right:      'https://screenshots.webflow.com/sites/6214ab9c9c02f62db5a16765/20220225040706_52b2d4264c949a71f2e1242205922d00.png',
     },
   },
+  {
+    number: '09',
+    category: 'Private System',
+    title: 'Pharmacy MS',
+    live:   'https://babilon-air.netlify.app/',
+    github: 'https://babilon-air.netlify.app/',
+    images: {
+      leftTop:    'https://i.pinimg.com/736x/67/01/ed/6701ed0883e4037a0632e927608e825d.jpg',
+      leftBottom: 'https://i.pinimg.com/736x/69/4e/46/694e4695fb4c2c8f8690216d45da9d42.jpg',
+      right:      'https://i.pinimg.com/1200x/5f/6f/d4/5f6fd46562acfa141249b2d92cb14f62.jpg',
+    },
+  },
 ]
 
 const TOTAL = PROJECTS.length
