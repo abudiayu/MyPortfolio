@@ -20,8 +20,8 @@ const PROJECTS = [
     number: '02',
     category: 'Personal',
     title: 'Student Management',
-    live:   'https://sms-thumblian.vercel.app/',
-    github: 'https://sms-thumblian.vercel.app/',
+    live:   'https://hidaya-project.vercel.app/',
+    github: 'https://github.com/abudiayu/Hidaya_project',
     images: {
       leftTop:    'https://s3-alpha.figma.com/hub/file/2342803295004297908/da5c9b2e-dde3-483d-9439-00838f82be8f-cover.png',
       leftBottom: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop',
@@ -44,8 +44,8 @@ const PROJECTS = [
     number: '04',
     category: 'Personal',
     title: 'Dental Clinic Site',
-    live:   'https://dr-mz-clinick.vercel.app/',
-    github: 'https://github.com/abudiayu/DR-DentalClinick',
+    live:   'https://dental-clinick-kamisse.vercel.app/',
+    github: 'https://github.com/abudiayu/Dental',
     images: {
       leftTop:    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv4w4-UzeaafEZlZYjK7WRW-sZRytZynkUPg&s',
       leftBottom: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFiWuMNA_UGs24vmkapw7gn73v3qRpRLDQJg&s',
@@ -110,6 +110,18 @@ const PROJECTS = [
       leftTop:    'https://i.pinimg.com/736x/67/01/ed/6701ed0883e4037a0632e927608e825d.jpg',
       leftBottom: 'https://i.pinimg.com/736x/69/4e/46/694e4695fb4c2c8f8690216d45da9d42.jpg',
       right:      'https://i.pinimg.com/1200x/5f/6f/d4/5f6fd46562acfa141249b2d92cb14f62.jpg',
+    },
+  },
+  {
+    number: '10',
+    category: 'Information System',
+    title: 'Wollo University Information System',
+    live:   'https://wollo-info-hub.vercel.app/',
+    github: 'https://github.com/abudiayu/Wollo-info-hub',
+    images: {
+      leftTop:    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NQ4VW2DPfR3UqWm46R-b_XDRIpkd1xDj5-atAG4iYA&s',
+      leftBottom: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_sOsQmHsDzqtJa9HysOXgi9iegZYJsLuLvn_MjHe8g&s',
+      right:      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe1n3abckkr9uhWQaoFrC4q2jO-0f-UiGFnK_bdgg-rQ&s=10',
     },
   },
 ]
