@@ -116,8 +116,8 @@ const PROJECTS = [
     number: '10',
     category: 'Information System',
     title: 'Wollo University Information System',
-    live:   'https://wollo-info-hub.vercel.app/',
-    github: 'https://github.com/abudiayu/Wollo-info-hub',
+    live:   'https://wollo-info-hub.vercel.app/not',
+    github: 'https://github.com/abudiay/Wollo-info-hub/',
     images: {
       leftTop:    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NQ4VW2DPfR3UqWm46R-b_XDRIpkd1xDj5-atAG4iYA&s',
       leftBottom: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_sOsQmHsDzqtJa9HysOXgi9iegZYJsLuLvn_MjHe8g&s',
