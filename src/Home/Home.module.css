@@ -193,7 +193,7 @@
 }
 
 .name_img {
-  height: clamp(48px, 7vw, 92px);
+  height: clamp(110px, 10vw, 100px);
   width: auto;
   object-fit: contain;
 }

@@ -125,9 +125,9 @@ function Home({ showSidebar }) {
 
               <div className={classes.header_text_container}>
                 <h1 className={classes.hero_title}>
-                  <span className={`${classes.line} ${classes.hiText}`} style={{ '--d': '0.25s' }}>Hi,</span>
+                  <span className={`${classes.line} ${classes.hiText}`} style={{ '--d': '0.25s' }}>Hellow,</span>
                   <span className={`${classes.line} ${classes.imRow}`} style={{ '--d': '0.4s' }}>
-                    <span className={classes.imText}>I'm</span>
+                    <span className={classes.imText}>I am</span>
                     <img src={Aqadr} alt="Aqadr" className={classes.name_img} />
                   </span>
                   <span className={`${classes.line} ${classes.devRow}`} style={{ '--d': '0.55s' }}>
