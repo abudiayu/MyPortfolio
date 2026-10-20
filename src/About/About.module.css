@@ -127,28 +127,32 @@
 .charGhost { visibility: hidden; display: inline; }
 .charReal  { position: absolute; left: 0; top: 0; display: inline; color: #d7e2ea; }
 
-/* ── contact button ──────────────────────────────────────── */
+/* ── contact button — same style as the project "See Project" button ── */
 .contactBtn {
-  padding: clamp(10px, 2vw, 16px) clamp(24px, 5vw, 48px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 2vw, 14px) clamp(26px, 5vw, 44px);
   border-radius: 9999px;
-  border: none;
+  border: 2px solid #d7e2ea;
+  background: #d7e2ea;
+  color: #0c0c0c;
   cursor: pointer;
-  color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: clamp(0.65rem, 1.5vw, 0.9rem);
-  background: linear-gradient(123deg, #18011f 7%, #b600a8 37%, #7621b0 72%, #be4c00 100%);
-  box-shadow:
-    0px 4px 4px rgba(181,1,167,0.25),
-    inset 4px 4px 12px #7721b1;
-  outline: 2px solid #fff;
-  outline-offset: -3px;
-  transition: box-shadow 0.25s, transform 0.2s;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.65rem, 1.5vw, 0.85rem);
   white-space: nowrap;
+  box-shadow: none;
+  outline: none;
+  transition: background 0.22s, color 0.22s, border-color 0.22s, transform 0.2s;
 }
 .contactBtn:hover {
-  box-shadow:
-    0px 6px 24px rgba(181,1,167,0.5),
-    inset 4px 4px 12px #7721b1;
+  background: #fff;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+.contactBtn:focus-visible {
+  outline: 2px solid #d7e2ea;
+  outline-offset: 3px;
 }

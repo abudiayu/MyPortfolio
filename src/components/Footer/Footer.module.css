@@ -1,6 +1,6 @@
 .footer {
-  background: #080a14;
-  color: white;
+  background: #0c0c0c;
+  color: #d7e2ea;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
 }
@@ -11,23 +11,23 @@
   grid-template-columns: 60px 1fr 80px;
   align-items: center;
   padding: 60px 5%;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(215,226,234,0.1);
   position: relative;
   background:
-    linear-gradient(135deg, rgba(91,82,240,0.06) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(138,164,184,0.07) 0%, transparent 50%),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 40px,
-      rgba(255,255,255,0.015) 40px,
-      rgba(255,255,255,0.015) 41px
+      rgba(215,226,234,0.02) 40px,
+      rgba(215,226,234,0.02) 41px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 40px,
-      rgba(255,255,255,0.015) 40px,
-      rgba(255,255,255,0.015) 41px
+      rgba(215,226,234,0.02) 40px,
+      rgba(215,226,234,0.02) 41px
     );
 }
 
@@ -43,9 +43,9 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.04);
-  color: white;
+  border: 1px solid rgba(215,226,234,0.25);
+  background: rgba(215,226,234,0.05);
+  color: #d7e2ea;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,8 +53,8 @@
   transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
 .socialBtn:hover {
-  border-color: #5b52f0;
-  background: rgba(91,82,240,0.2);
+  border-color: #d7e2ea;
+  background: rgba(215,226,234,0.15);
   transform: scale(1.1);
 }
 
@@ -62,17 +62,18 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #5b52f0;
-  color: white;
+  background: #d7e2ea;
+  color: #0c0c0c;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 .socialBtnPrimary:hover {
+  background: #fff;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(91,82,240,0.5);
+  box-shadow: 0 6px 20px rgba(215,226,234,0.25);
 }
 
 /* ── Center ── */
@@ -87,24 +88,24 @@
 .phone {
   font-size: clamp(1.6rem, 3.5vw, 2.8rem);
   font-weight: 900;
-  color: white;
+  color: #d7e2ea;
   text-decoration: none;
   letter-spacing: -0.5px;
   line-height: 1.1;
   transition: color 0.2s;
 }
-.phone:hover { color: #5b52f0; }
+.phone:hover { color: #8aa4b8; }
 
 .email {
   font-size: clamp(1.4rem, 3vw, 2.4rem);
   font-weight: 900;
-  color: white;
+  color: #d7e2ea;
   text-decoration: none;
   letter-spacing: -0.5px;
   line-height: 1.1;
   transition: color 0.2s;
 }
-.email:hover { color: #5b52f0; }
+.email:hover { color: #8aa4b8; }
 
 .nav {
   display: flex;
@@ -112,14 +113,14 @@
   margin-top: 20px;
 }
 .nav a {
-  color: #6b7280;
+  color: #8aa4b8;
   text-decoration: none;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   transition: color 0.2s;
 }
-.nav a:hover { color: white; }
+.nav a:hover { color: #fff; }
 
 /* ── Right buttons ── */
 .rightBtns {
@@ -130,8 +131,8 @@
 }
 
 .contactVertical {
-  background: #5b52f0;
-  color: white;
+  background: #d7e2ea;
+  color: #0c0c0c;
   text-decoration: none;
   border-radius: 30px;
   padding: 14px 10px;
@@ -148,7 +149,7 @@
   min-height: 120px;
 }
 .contactVertical:hover {
-  background: #4a43d4;
+  background: #fff;
   transform: scale(1.04);
 }
 
@@ -156,17 +157,18 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #5b52f0;
-  color: white;
+  background: #d7e2ea;
+  color: #0c0c0c;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 .arrowBtn:hover {
+  background: #fff;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(91,82,240,0.5);
+  box-shadow: 0 6px 20px rgba(215,226,234,0.25);
 }
 
 /* ── Bottom bar ── */
@@ -177,7 +179,7 @@
   justify-content: center;
   gap: 60px;
   padding: 18px 5%;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(215,226,234,0.1);
 }
 
 .copyright {
@@ -194,20 +196,20 @@
 }
 
 .year {
-  color: white;
+  color: #d7e2ea;
   font-weight: 700;
 }
 
 .brandName {
-  color: #5b52f0;
+  color: #8aa4b8;
   text-decoration: none;
   font-weight: 700;
   transition: color 0.2s;
 }
-.brandName:hover { color: #a5b4fc; }
+.brandName:hover { color: #fff; }
 
 .rights {
-  color: #4b5563;
+  color: #5f6b76;
 }
 
 .brand {
@@ -217,7 +219,7 @@
   gap: 8px;
   font-weight: 800;
   font-size: 1.28rem;
-  color: white;
+  color: #d7e2ea;
 }
 .brandLogo { height: 18px; }
 
@@ -231,12 +233,12 @@
 .addressLabel {
   font-size: 1.28rem;
   font-weight: 700;
-  color: white;
+  color: #d7e2ea;
 }
 
 .addressText {
   font-size: 1.28rem;
-  color: #4b5563;
+  color: #5f6b76;
 }
 
 /* ── Big tagline ── */
@@ -251,16 +253,14 @@
   font-size: clamp(2rem, 8vw, 7rem);
   font-weight: 900;
   color: transparent;
-  -webkit-text-stroke: 2px rgba(255,255,255,0.35);
+  -webkit-text-stroke: 2px rgba(215,226,234,0.35);
   letter-spacing: -2px;
 }
-
 
 .taglineBold {
   font-size: clamp(2rem, 8vw, 7rem);
   font-weight: 900;
-  color: white;
-  /* letter-spacing: 2px; */
+  color: #d7e2ea;
 }
 
 /* ── Responsive ── */
