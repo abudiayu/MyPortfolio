@@ -1,8 +1,54 @@
+/* ═══════════════════════════════════════════════════════════
+   FOOTER — #12161d → #0a0e14 · silver text · gold only on
+   the "TOGETHER" tagline and the main contact button
+   ═══════════════════════════════════════════════════════════ */
+
 .footer {
-  background: #0c0c0c;
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(to bottom, #12161d 0%, #0a0e14 100%);
   color: #d7e2ea;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
+}
+
+/* keep all real content above the decorative layers */
+.footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── layer 1: soft steel-blue glow (ties back to the navy hero) ── */
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: -20% -10% 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 50% at 15% 90%, rgba(15, 34, 54, 0.9), transparent 70%),
+    radial-gradient(35% 45% at 85% 80%, rgba(138, 164, 184, 0.10), transparent 70%);
+  filter: blur(26px);
+  animation: footerDrift 14s ease-in-out infinite alternate;
+}
+@keyframes footerDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(2%, -3%, 0) scale(1.08); }
+}
+
+/* ── layer 2: faint grid, fades out toward the top ───────── */
+.footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(215, 226, 234, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(215, 226, 234, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 100%, #000 0%, transparent 75%);
+          mask-image: radial-gradient(ellipse 80% 70% at 50% 100%, #000 0%, transparent 75%);
 }
 
 /* ── Main contact area ── */
@@ -11,24 +57,18 @@
   grid-template-columns: 60px 1fr 80px;
   align-items: center;
   padding: 60px 5%;
-  border-top: 1px solid rgba(215,226,234,0.1);
   position: relative;
-  background:
-    linear-gradient(135deg, rgba(138,164,184,0.07) 0%, transparent 50%),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 40px,
-      rgba(215,226,234,0.02) 40px,
-      rgba(215,226,234,0.02) 41px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 40px,
-      rgba(215,226,234,0.02) 40px,
-      rgba(215,226,234,0.02) 41px
-    );
+}
+
+/* thin silver line along the top edge */
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(215, 226, 234, 0.45), transparent);
 }
 
 /* ── Socials (left vertical stack) ── */
@@ -43,8 +83,9 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 1px solid rgba(215,226,234,0.25);
-  background: rgba(215,226,234,0.05);
+  border: 1px solid rgba(215, 226, 234, 0.25);
+  background: rgba(215, 226, 234, 0.05);
+  backdrop-filter: blur(6px);
   color: #d7e2ea;
   display: flex;
   align-items: center;
@@ -54,7 +95,7 @@
 }
 .socialBtn:hover {
   border-color: #d7e2ea;
-  background: rgba(215,226,234,0.15);
+  background: rgba(215, 226, 234, 0.15);
   transform: scale(1.1);
 }
 
@@ -63,7 +104,7 @@
   height: 34px;
   border-radius: 50%;
   background: #d7e2ea;
-  color: #0c0c0c;
+  color: #0a0e14;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +114,7 @@
 .socialBtnPrimary:hover {
   background: #fff;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(215,226,234,0.25);
+  box-shadow: 0 6px 24px rgba(215, 226, 234, 0.3);
 }
 
 /* ── Center ── */
@@ -92,9 +133,9 @@
   text-decoration: none;
   letter-spacing: -0.5px;
   line-height: 1.1;
-  transition: color 0.2s;
+  transition: color 0.2s, text-shadow 0.2s;
 }
-.phone:hover { color: #8aa4b8; }
+.phone:hover { color: #fff; text-shadow: 0 0 28px rgba(215, 226, 234, 0.45); }
 
 .email {
   font-size: clamp(1.4rem, 3vw, 2.4rem);
@@ -103,9 +144,9 @@
   text-decoration: none;
   letter-spacing: -0.5px;
   line-height: 1.1;
-  transition: color 0.2s;
+  transition: color 0.2s, text-shadow 0.2s;
 }
-.email:hover { color: #8aa4b8; }
+.email:hover { color: #fff; text-shadow: 0 0 28px rgba(215, 226, 234, 0.45); }
 
 .nav {
   display: flex;
@@ -130,9 +171,10 @@
   gap: 10px;
 }
 
+/* ★ main contact button — GOLD */
 .contactVertical {
-  background: #d7e2ea;
-  color: #0c0c0c;
+  background: #f5c518;
+  color: #0a0e14;
   text-decoration: none;
   border-radius: 30px;
   padding: 14px 10px;
@@ -145,12 +187,13 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   min-height: 120px;
 }
 .contactVertical:hover {
-  background: #fff;
+  background: #ffd84a;
   transform: scale(1.04);
+  box-shadow: 0 8px 28px rgba(245, 197, 24, 0.35);
 }
 
 .arrowBtn {
@@ -158,7 +201,7 @@
   height: 34px;
   border-radius: 50%;
   background: #d7e2ea;
-  color: #0c0c0c;
+  color: #0a0e14;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +211,7 @@
 .arrowBtn:hover {
   background: #fff;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(215,226,234,0.25);
+  box-shadow: 0 6px 24px rgba(215, 226, 234, 0.3);
 }
 
 /* ── Bottom bar ── */
@@ -179,7 +222,7 @@
   justify-content: center;
   gap: 60px;
   padding: 18px 5%;
-  border-top: 1px solid rgba(215,226,234,0.1);
+  border-top: 1px solid rgba(215, 226, 234, 0.12);
 }
 
 .copyright {
@@ -209,7 +252,7 @@
 .brandName:hover { color: #fff; }
 
 .rights {
-  color: #5f6b76;
+  color: #66727d;
 }
 
 .brand {
@@ -238,7 +281,7 @@
 
 .addressText {
   font-size: 1.28rem;
-  color: #5f6b76;
+  color: #66727d;
 }
 
 /* ── Big tagline ── */
@@ -253,14 +296,25 @@
   font-size: clamp(2rem, 8vw, 7rem);
   font-weight: 900;
   color: transparent;
-  -webkit-text-stroke: 2px rgba(215,226,234,0.35);
+  -webkit-text-stroke: 2px rgba(215, 226, 234, 0.35);
   letter-spacing: -2px;
 }
 
+/* ★ "TOGETHER" — GOLD */
 .taglineBold {
   font-size: clamp(2rem, 8vw, 7rem);
   font-weight: 900;
-  color: #d7e2ea;
+  background: linear-gradient(135deg, #f5c518 0%, #fff0a8 35%, #c9a227 65%, #f5c518 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: taglineShift 6s ease infinite;
+}
+@keyframes taglineShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ── Responsive ── */
@@ -318,4 +372,10 @@
   .nav { gap: 12px; }
   .nav a { font-size: 0.68rem; }
   .main { padding: 30px 5%; gap: 22px; }
+}
+
+/* respect users who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+  .footer::before,
+  .taglineBold { animation: none; }
 }

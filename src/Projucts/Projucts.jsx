@@ -16,7 +16,7 @@ const PROJECTS = [
     description:
       'An online store built for a client with a clean product catalog, cart and a smooth checkout flow, designed to feel fast and trustworthy on both desktop and mobile.',
     stack: ['React', 'Responsive UI', 'Netlify'],
-    role: 'Design & front-end development',
+    role: 'Creativity & Full-Stack development',
     images: {
       leftTop: 'https://play-lh.googleusercontent.com/vZzAzNNGUTxnNG43TWkzegqARRhJ5InumIRyxLhbB5qDRcJVHDJs1WzTJcs3ESOI1w=w526-h296-rw',
       leftBottom: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
@@ -32,7 +32,7 @@ const PROJECTS = [
     description:
       'The school management system behind Hidaya Islamic Academy. Students, classes and records live in one dashboard, so administrators spend less time on paperwork. It supports English and Amharic.',
     stack: ['React (Vite)', 'Supabase', 'React Router', 'EN / AM'],
-    role: 'Full-stack development',
+    role: 'Full-stack development with chatbot',
     images: {
       leftTop: 'https://s3-alpha.figma.com/hub/file/2342803295004297908/da5c9b2e-dde3-483d-9439-00838f82be8f-cover.png',
       leftBottom: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop',
@@ -48,7 +48,7 @@ const PROJECTS = [
     description:
       'A warm, appetizing website for a cafe where customers can browse the menu and order for delivery in a few taps.',
     stack: ['React', 'Ordering UI', 'Netlify'],
-    role: 'Design & front-end development',
+    role: 'Creativity & Full-Stack development',
     images: {
       leftTop: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&h=600&fit=crop',
       leftBottom: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop',
@@ -80,7 +80,7 @@ const PROJECTS = [
     description:
       'A bold, trustworthy website for an auto garage that presents its services clearly and makes it easy for customers to get in touch.',
     stack: ['React', 'Responsive UI', 'Vercel'],
-    role: 'Design & front-end development',
+    role: 'Creativity & Full-Stack development',
     images: {
       leftTop: 'https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=612x612&w=0&k=20&c=5zlDGgLNNaWsp_jq_L1AsGT85wrzpdl3kVH-75S-zTU=',
       leftBottom: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop',
@@ -96,7 +96,7 @@ const PROJECTS = [
     description:
       'A Netflix-style streaming interface built to practice layout, carousels and pixel-accurate UI work.',
     stack: ['HTML', 'CSS', 'JavaScript'],
-    role: 'Front-end development',
+    role: 'Clone & Full-Stack development',
     images: {
       leftTop: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
       leftBottom: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&h=600&fit=crop',
@@ -112,7 +112,7 @@ const PROJECTS = [
     description:
       'A sharp, stylish website for a barber shop that shows off services and the shop atmosphere, and makes booking a visit simple.',
     stack: ['React', 'Booking UI', 'Netlify'],
-    role: 'Design & front-end development',
+    role: 'Creativity & Full-Stack development',
     images: {
       leftTop: 'https://img.freepik.com/premium-vector/classic-barber-shop-banner-template_941802-3639.jpg',
       leftBottom: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&h=600&fit=crop',
@@ -128,7 +128,7 @@ const PROJECTS = [
     description:
       'A stay-booking interface inspired by Airbnb, with listing cards, search and a clean, photo-first layout.',
     stack: ['React', 'Listings UI', 'Netlify'],
-    role: 'Front-end development',
+    role: 'Clone & Full-Stack development',
     images: {
       leftTop: 'https://c8.alamy.com/comp/2M0W154/smartphone-with-logo-of-american-homestay-marketplace-company-airbnb-inc-on-screen-in-front-of-business-website-focus-on-right-of-phone-display-2M0W154.jpg',
       leftBottom: 'https://cdn.dribbble.com/userupload/26284611/file/original-9f4a1ae268e9fe9a835fff727dd8c423.jpg?format=webp&resize=400x300&vertical=center',
@@ -160,7 +160,7 @@ const PROJECTS = [
     description:
       'An information hub for Wollo University that brings announcements and campus information together in one place, with account registration and login.',
     stack: ['React', 'Express', 'MySQL'],
-    role: 'Full-stack development',
+    role: 'Full-stack development with AI inegratoion',
     images: {
       leftTop: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NQ4VW2DPfR3UqWm46R-b_XDRIpkd1xDj5-atAG4iYA&s',
       leftBottom: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_sOsQmHsDzqtJa9HysOXgi9iegZYJsLuLvn_MjHe8g&s',

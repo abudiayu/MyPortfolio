@@ -1,26 +1,26 @@
 /* ================================================================
-   Home.module.css  (full file, replaces the old one)
+   Home.module.css — Midnight + Silver + Gold
    ================================================================ */
 
 .header_container {
-  --navy: #0c2238;
-  --navy-deep: #08182a;
-  --yellow: #ffd60a;
+  --navy: #0b2540;          /* hero top */
+  --surface: #12161d;       /* nav bar surface */
+  --yellow: #f5c518;        /* the single accent (gold) */
   --blue: #4fb3d9;
   --blue-deep: #14577f;
-  --text: #e8f0f7;
-  --muted: #8fa6bb;
+  --text: #d7e2ea;          /* silver */
+  --muted: #8aa4b8;         /* steel */
 
-  /* 👇 SET THIS to the top colour of the section right below the hero,
-        so the photo fades straight into it (no visible edge) */
-  --next-section-bg: #1d4a6b;
+  /* 👇 The hero fades down into this colour. Keep it equal to the TOP
+        colour of the Skills section so there is no seam (Skills = #0f2236). */
+  --next-section-bg: #0f2236;
 
   position: relative;
   min-height: 100vh;
   overflow: hidden; /* clips the photo's overhang at the very bottom edge */
   background:
-    radial-gradient(1000px 600px at 80% 40%, rgba(20, 87, 127, 0.35), transparent 60%),
-    linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 65%, var(--next-section-bg) 100%);
+    radial-gradient(1000px 600px at 80% 40%, rgba(20, 87, 127, 0.30), transparent 60%),
+    linear-gradient(180deg, var(--navy) 0%, #0a1c30 60%, var(--next-section-bg) 100%);
   color: var(--text);
 }
 
@@ -46,11 +46,11 @@
   gap: 10px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(20, 28, 40, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 22, 29, 0.65);
+  border: 1px solid rgba(215, 226, 234, 0.12);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 .header_side_icon,
@@ -62,7 +62,7 @@
 
 .header_side_icon_contact {
   padding-left: 10px;
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(215, 226, 234, 0.14);
 }
 
 .navLink,
@@ -75,13 +75,13 @@
   height: 38px;
   padding: 0 9px;
   border-radius: 999px;
-  color: #aeb8c4 !important;
+  color: var(--muted) !important;
   text-decoration: none !important;
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .personalInfoLink {
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(215, 226, 234, 0.07);
   padding: 0 14px;
 }
 
@@ -93,24 +93,25 @@
 .navLink:hover,
 .personalInfoLink:hover {
   color: var(--yellow) !important;
-  background: rgba(255, 214, 10, 0.12);
+  background: rgba(245, 197, 24, 0.12);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 214, 10, 0.15);
+  box-shadow: 0 6px 18px rgba(245, 197, 24, 0.15);
 }
 
+/* home icon — gold, same accent as the rest of the site */
 .navActive {
   color: var(--yellow) !important;
-  background: rgba(255, 214, 10, 0.14);
+  background: rgba(245, 197, 24, 0.14);
 }
 
 .emailLink {
-  background: rgba(255, 255, 255, 0.9);
-  color: #111 !important;
+  background: var(--text);
+  color: #0a0e14 !important;
 }
 
 .emailLink:hover {
   background: var(--yellow);
-  color: #111 !important;
+  color: #0a0e14 !important;
 }
 
 /* ======================== HERO LAYOUT ======================== */
@@ -154,9 +155,9 @@
   font-weight: 500;
   letter-spacing: 0.03em;
   color: var(--text);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(215, 226, 234, 0.28);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(215, 226, 234, 0.04);
   backdrop-filter: blur(6px);
 }
 
@@ -205,19 +206,20 @@
 
 .thinWord {
   font-weight: 200;
-  color: #c9d8e6;
+  color: var(--text);
   letter-spacing: -0.02em;
 }
 
+/* gold → silver (one accent + one neutral, no green/blue) */
 .webDeveloper {
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(90deg, var(--yellow) 0%, #9ccf9a 50%, var(--blue) 100%);
+  background: linear-gradient(90deg, var(--yellow) 0%, #f3e3a0 45%, var(--text) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  filter: drop-shadow(0 0 18px rgba(79, 179, 217, 0.25));
+  filter: drop-shadow(0 0 18px rgba(245, 197, 24, 0.18));
 }
 
 .skills {
@@ -251,11 +253,11 @@
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #111;
+  color: #0a0e14;
   background: var(--yellow);
   border: none;
   border-radius: 999px;
-  box-shadow: 0 0 0 rgba(255, 214, 10, 0);
+  box-shadow: 0 0 0 rgba(245, 197, 24, 0);
 }
 
 .arrowCircle {
@@ -265,14 +267,14 @@
   height: 36px;
   font-size: 1.15rem;
   color: var(--yellow);
-  background: #0b1a2b;
+  background: #0a0e14;
   border-radius: 50%;
   transition: transform 0.35s ease;
 }
 
 .contactMe_page:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 36px rgba(255, 214, 10, 0.4);
+  box-shadow: 0 10px 36px rgba(245, 197, 24, 0.4);
 }
 
 .contactMe_page:hover .arrowCircle {
@@ -286,7 +288,7 @@
   letter-spacing: 0.06em;
   color: var(--text);
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(215, 226, 234, 0.3);
   border-radius: 999px;
 }
 
@@ -294,8 +296,8 @@
   transform: translateY(-3px);
   color: var(--yellow);
   border-color: var(--yellow);
-  background: rgba(255, 214, 10, 0.07);
-  box-shadow: 0 8px 28px rgba(255, 214, 10, 0.12);
+  background: rgba(245, 197, 24, 0.07);
+  box-shadow: 0 8px 28px rgba(245, 197, 24, 0.12);
 }
 
 .description {
@@ -340,7 +342,6 @@
   width: 70%;
   height: 70%;
   bottom: 10%;
-  /* background: radial-gradient(circle, var(--yellow) 0%, rgba(255, 214, 10, 0) 70%); */
   animation: blobDriftA 18s ease-in-out infinite;
 }
 
@@ -450,7 +451,7 @@
     gap: 10px;
   }
 
- .hero_text {
+  .hero_text {
     align-self: flex-start;
     padding: 24px 22px 26px;
     margin-bottom: 20px;
@@ -458,18 +459,19 @@
     /* frosted glass card */
     background: linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.09) 0%,
-      rgba(255, 255, 255, 0.03) 100%
+      rgba(215, 226, 234, 0.09) 0%,
+      rgba(215, 226, 234, 0.03) 100%
     );
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(215, 226, 234, 0.12);
     border-radius: 28px;
     -webkit-backdrop-filter: blur(14px) saturate(140%);
     backdrop-filter: blur(8px) saturate(140%);
     box-shadow:
       0 18px 50px rgba(0, 0, 0, 0.35),
-      inset 0 1px 0 rgba(255, 255, 255, 0.18),
-      0 0 40px rgba(79, 179, 217, 0.08);
+      inset 0 1px 0 rgba(215, 226, 234, 0.16),
+      0 0 40px rgba(20, 87, 127, 0.10);
   }
+
   .hero_image_col {
     align-self: end;
   }

@@ -8,6 +8,7 @@ import Projucts from './Projucts/Projucts';
 import Contact from './Contact/Contact';
 import PersonalInfo from './PersonalInfo/PersonalInfo';
 import { KeyboardArrowUp } from '@mui/icons-material';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -68,7 +69,7 @@ function App() {
             <Skill/>
             <About/>
             <Projucts/>
-            <Contact/>
+            <Footer/>
             
             {showScrollTop && (
               <button 
