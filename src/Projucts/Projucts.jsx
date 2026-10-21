@@ -167,6 +167,22 @@ const PROJECTS = [
       right: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe1n3abckkr9uhWQaoFrC4q2jO-0f-UiGFnK_bdgg-rQ&s=10',
     },
   },
+  {
+    number: '11',
+    category: 'SAAS Donation web app',
+    title: 'DEMERA NGO Donation System',
+    live: 'https://demera.vercel.app/',
+    github: 'https://github.com/abudiay/DEMERA/',
+    description:
+      'The DEMERA Non Profit Foundation Or NGO system that will help them as To express there goal and to conated the Donation from all Of the worlds volunteeris by APP,Google pay,Cradit car by this system',
+    stack: ['React', 'Express', 'PostgresSQL'],
+    role: 'Full-stack development with Payment System',
+    images: {
+      leftTop: 'https://teddyguday.com/wp-content/uploads/2023/09/demodemeralogoblue.png',
+      leftBottom: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoNVpvNsCFHLLzDALIcHICVi7-J5WDPRZNpSk6q5FlhTahMpFq2hZolkk&s=10',
+      right: 'https://img.magnific.com/free-psd/waste-management-landing-page-post-design-template_23-2149111688.jpg?semt=ais_hybrid&w=740&q=80',
+    },
+  },
 ]
 
 const TOTAL = PROJECTS.length
